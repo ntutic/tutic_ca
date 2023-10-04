@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio</title>
+        <link th:href="@{/main.css}" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <style>
+            body {
+                font-family: 'Lato', sans-serif;
+                font-size: 18px;
+                font-style: normal;
+            }
+        </style>
+
+
+        <!-- DEV ONLY -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="bg-gray-100 text-center">
+        <header class="fixed top-0 w-full">
+            <nav class="bg-white shadow-lg border-b border-gray-300">
+                <div class="container mx-auto flex justify-between items-center py-10 px-20">
+                    <!-- Logo or Branding -->
+                    <div class="text-xl font-semibold">
+                        <a href="#">Nikola Tutić</a>
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <ul class="flex space-x-12">
+                        <li><a href="#about" class="text-gray-600 hover:font-bold">About</a></li>
+                        <li><a href="#education" class="text-gray-600 hover:font-bold">Education</a></li>
+                        <li><a href="#work" class="text-gray-600 hover:font-bold">Work Experience</a></li>
+                        <li><a href="#portfolio" class="text-gray-600 hover:font-bold">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-600 hover:font-bold">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div id="filler" class="container py-14"></div>
+        <div class="container mx-auto">
+
+            <section id="about" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
+                <h1 class="text-2xl">About</h1>
+                <p>Biologist turned developer [...] </p>
+            </section>
+
+            <section id="education" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
+                <h1 class="text-2xl">Education</h1>
+                <div class="grid grid-cols-2 my-3" th:each="diploma: ${diplomas}">
+                    <div class="container text-right pr-4">
+                        <p th:text="${diploma.school}" class="text-gray-400">School</p>
+                        <p th:text="${diploma.diploma}">Diploma</p>
+                    </div>
+                    <div class="container text-left pl-4">
+                        <p th:text="${diploma.period}" class="text-gray-400">Start - End</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="work" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
+                <h1 class="text-2xl">Work Experience</h1>
+                <div class="grid grid-cols-2 my-3" th:each="job: ${jobs}">
+                    <div class="container text-right pr-4">
+                        <p th:text="${job.employer}" class="text-gray-400">Employer</p>
+                        <p th:text="${job.title}">Title</p>
+                        <a th:text="${job.urlText}" th:href="${job.urlLink}" target="_blank" class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">URL</a>
+
+                    </div>
+                    <div class="container text-left pl-4">
+                        <p th:text="${job.period}" class="text-gray-400">Start - End</p>
+                        <p th:text="${job.description}">Description</p>
+                        <p th:text="${job.descriptionExtra}">Description Extra</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
+                <h1 class="text-2xl">Portfolio</h1>
+            </section>
+
+            <section id="contact" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
+                <h1 class="text-2xl">Contact</h1>
+            </section>
+
+        </div>
+    </body>
+</html>
