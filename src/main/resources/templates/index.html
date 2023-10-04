@@ -6,6 +6,14 @@
         <link th:href="@{/main.css}" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <script
+                src="https://code.jquery.com/jquery-3.7.1.min.js"
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+                crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.js"></script>
         <style>
             body {
                 font-family: 'Lato', sans-serif;
@@ -13,8 +21,6 @@
                 font-style: normal;
             }
         </style>
-
-
         <!-- DEV ONLY -->
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
@@ -23,17 +29,15 @@
         <header class="fixed top-0 w-full">
             <nav class="bg-white shadow-lg border-b border-gray-300">
                 <div class="container mx-auto flex justify-between items-center py-10 px-20">
-                    <!-- Logo or Branding -->
                     <div class="text-xl font-semibold">
                         <a href="#">Nikola Tutić</a>
                     </div>
 
-                    <!-- Navigation Links -->
                     <ul class="flex space-x-12">
                         <li><a href="#about" class="text-gray-600 hover:font-bold">About</a></li>
+                        <li><a href="#portfolio" class="text-gray-600 hover:font-bold">Portfolio</a></li>
                         <li><a href="#education" class="text-gray-600 hover:font-bold">Education</a></li>
                         <li><a href="#work" class="text-gray-600 hover:font-bold">Work Experience</a></li>
-                        <li><a href="#portfolio" class="text-gray-600 hover:font-bold">Portfolio</a></li>
                         <li><a href="#contact" class="text-gray-600 hover:font-bold">Contact</a></li>
                     </ul>
                 </div>
@@ -46,6 +50,17 @@
             <section id="about" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
                 <h1 class="text-2xl">About</h1>
                 <p>Biologist turned developer [...] </p>
+            </section>
+
+            <section id="portfolio" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
+                <h1 class="text-2xl">Portfolio</h1>
+                <div class="container grid grid-cols-3">
+                    <div class="my-3">Abc</div>
+                    <div class="image-carousel col-span-2 grid grid-cols-3 my-3">
+                        <img class="h-auto w-full" th:each="image: ${images}" th:src="${'/img/scraper_gui/' + image}" alt="Image 1">
+                    </div>
+                </div>
+
             </section>
 
             <section id="education" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
@@ -78,14 +93,20 @@
                 </div>
             </section>
 
-            <section id="portfolio" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
-                <h1 class="text-2xl">Portfolio</h1>
-            </section>
-
             <section id="contact" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
                 <h1 class="text-2xl">Contact</h1>
             </section>
 
         </div>
     </body>
+
+    <script>
+        $(document).ready(function(){
+            $('.image-carousel').slick({
+                arrows: true,
+                prevArrow: '<button class="slick-prev w-1/6 h-auto font-bold text-4xl inset-y-0 right-0" aria-label="Previous" type="button"><</button>',
+                nextArrow: '<button class="slick-next w-1/6 h-auto font-bold text-4xl" aria-label="Next" type="button">></button>',
+            })
+        });
+    </script>
 </html>

@@ -3,9 +3,73 @@
     "employer": "UpWork",
     "title": "Freelance Developer",
     "period": "2022 - 2023",
+    "location": "Remote",
     "description": "GUIs, daemons, data parsing, databases, scraping",
     "descriptionExtra": "Top-rated - 5.00/5.00 - US$5k+",
     "urlText": "View freelancer profile",
     "urlLink": "https://www.upwork.com/freelancers/~01d06d647eb569a541"
+  },
+  {
+    "employer": "Oneka Technologies",
+    "title": "Laborer",
+    "period": "2021",
+    "location": "Shebrooke (QC), Canada",
+    "description": "Offices construction, benchmark testing"
+  },
+  {
+    "employer": "Vaudreuil-Soulanges Watershed Organization",
+    "title": "Project Manager",
+    "period": "2019 - 2020",
+    "location": "Saint-Polycarpe (QC), Canada",
+    "description": "Stakeholder outreach, grant seeking, GIS"
+  },
+  {
+    "employer": "South Gaspésie Watershed Organization",
+    "title": "Project Manager",
+    "period": "2018 - 2019",
+    "location": "Bonaventure (QC), Canada",
+    "description": "Citizen outreach, grant seeking, monitoring"
+  },
+  {
+    "employer": "Sykes Canada",
+    "title": "Technical Support",
+    "period": "2017 - 2018",
+    "location": "Sherbrooke (QC), Canada",
+    "description": "Customer support, replacement supervisor"
+  },
+  {
+    "employer": "Écollab (now Agropol)",
+    "title": "Agro-entrepreneur",
+    "period": "2016 - 2017",
+    "location": "Sherbrooke (QC), Canada",
+    "description": "Production, sales"
+  },
+  {
+    "employer": "Shipley’s Vegetal Ecology Lab at UdeS",
+    "title": "Research Assistant",
+    "period": "2015 - 2016",
+    "location": "Sherbrooke (QC), Canada",
+    "description": "Botany, sampling, taxonomy"
+  },
+  {
+    "employer": "Environment Ministry of Quebec (MELCC)",
+    "title": "Analyst",
+    "period": "2016",
+    "location": "Rimouski (QC), Canada",
+    "description": "Environmental permitting"
+  },
+  {
+    "employer": "Baraloto’s Tropical Ecology Lab at ECOFOG",
+    "title": "Research Assistant",
+    "period": "2015",
+    "location": "Kourou (French Guiana), France",
+    "description": "Entomology, sampling, taxonomy"
+  },
+  {
+    "employer": "Holland's Tree Snail Conservation Lab at UoH",
+    "title": "Research Assistant",
+    "period": "2014",
+    "location": "Honolulu (HI), USA",
+    "description": "Conservation, population genetics"
   }
 ]

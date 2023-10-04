@@ -8,15 +8,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
-public class JsonService {
+public class StaticService {
     private ObjectMapper objectMapper;
 
-    public JsonService(ObjectMapper objectMapper) {
+    public StaticService(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
     }
 
@@ -39,5 +41,12 @@ public class JsonService {
             return objectMapper.readValue(is, new TypeReference<List<Job>>() {
             });
         }
+    }
+
+    public List<String> getImages(String dir) throws IOException {
+        File folder = new ClassPathResource("static/img/" + dir).getFile();
+        String[] files = folder.list();
+        List<String> images = Arrays.asList(files);
+        return images;
     }
 }

@@ -6,4 +6,5 @@ import lombok.Data;
 public class Project {
     private String title;
     private String description;
+    private String imageDir;
 }

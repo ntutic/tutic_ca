@@ -7,6 +7,7 @@ public class Job {
     private String employer;
     private String title;
     private String period;
+    private String location;
     private String description;
     private String descriptionExtra;
     private String urlLink;
