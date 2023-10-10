@@ -1,7 +1,109 @@
 [
   {
-    "title": "Scraping GUI",
-    "description": "Integrated desktop application to execute scraping scripts, manage configurations and output to database or files.",
-    "imageDir": "scraper_gui"
+    "title": "Control Panel for Farming Device (1)",
+    "description": "Integrated desktop application to monitor and control agricultural machines.",
+    "imageDir": "farmer_panel",
+    "alts": [
+      "Two-way communication with device",
+      "Mockable data for development",
+      "Fully customizable labels",
+      "Configurable connection and data inputs"
+    ],
+    "tools": [
+      "Python",
+      "Qt",
+      "PyModbus"
+    ]
+  },
+  {
+    "title": "Scraping Scripts Launcher",
+    "description": "Manager and launcher for various related scraping scripts.",
+    "imageDir": "scraper_gui",
+    "alts": [
+      "Launcher with per-script configs",
+      "Control scraper behavior",
+      "Handle data pipelines for output",
+      "Seemlessly add new scripts to client's machine"
+    ],
+    "tools": [
+      "Python",
+      "Qt",
+      "AWS",
+      "Selenium",
+      "SQL"
+    ]
+  },
+  {
+    "title": "Modbus Data Stream Monitoring",
+    "description": "Process for monitoring a Modbus data stream and trigger actions on certain ",
+    "imageDir": "monitor_relay",
+    "alts": [
+      "Monitor data stream and act on it",
+      "Dynamic system tray as indicator",
+      "Configurable processes and logging"
+    ],
+    "tools": [
+      "Python",
+      "PyModbus",
+      "pystray"
+    ]
+  },
+  {
+    "title": "Control Panel for Farming Device (2)",
+    "description": "Integrated desktop application to control agricultural machines ",
+    "imageDir": "rotary_panel",
+    "alts": [
+      "Two-way communication with device",
+      "Monitor current status of device",
+      "Configure machine with access control",
+      "Shipped to clients as executable app"
+    ],
+    "tools": [
+      "Python",
+      "PyModbus",
+      "nuitka"
+    ]
+  },
+  {
+    "title": "MS Access Integrated Manager and Launcher",
+    "description": "Integrated database management interface and script launcher directly in Microsoft Access ",
+    "imageDir": "access_gui",
+    "alts": [
+      "Configurable launcher for data scraping",
+      "Consultation and data editing",
+      "Syncing between Access and the RDS database"
+    ],
+    "tools": [
+      "VBA",
+      "AWS",
+      "SQL"
+    ]
+  },
+  {
+    "title": "Personal Website",
+    "description": "Simple personal website",
+    "imageDir": "portfolio_site",
+    "alts": [
+      "The website you are currently browsing",
+      "Native GraalVM image hosted on EC2 instance"
+    ],
+    "tools": [
+      "Java",
+      "Spring Boot",
+      "HTML",
+      "TailwindCSS"
+    ],
+    "github": "https://github.com/ntutic/tutic_ca"
+  },
+  {
+    "title": "",
+    "description": "",
+    "imageDir": "",
+    "alts": [
+      ""
+    ],
+    "tools": [
+      ""
+    ]
   }
 ]

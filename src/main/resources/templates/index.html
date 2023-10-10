@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
         <title>Portfolio</title>
-        <link th:href="@{/main.css}" rel="stylesheet" />
+        <link th:href="@{/css/main.css}" rel="stylesheet" />
+        <link th:href="@{/css/dots.css}" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <script
@@ -26,7 +27,7 @@
     </head>
 
     <body class="bg-gray-100 text-center">
-        <header class="fixed top-0 w-full">
+        <header class="fixed top-0 w-full z-20">
             <nav class="bg-white shadow-lg border-b border-gray-300">
                 <div class="container mx-auto flex justify-between items-center py-10 px-20">
                     <div class="text-xl font-semibold">
@@ -49,15 +50,54 @@
 
             <section id="about" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
                 <h1 class="text-2xl">About</h1>
-                <p>Biologist turned developer [...] </p>
+                <div class="grid grid-cols-2 my-3">
+                    <div class="container text-right pr-4">
+                        <p class="text-gray-400">Who</p>
+                        <p>Biologist turned developer</p>
+                    </div>
+                    <div class="container text-left pr-4">
+                        <p class="text-gray-400">Why</p>
+                        <p>To automate, analyze and </p>
+                    </div>
+                </div>
+                <div class="my-3">
+                    <p class="text-gray-400">What</p>
+                    <span>Launcher for</span>
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">agriculture machines</a>
+                    <span> and </span>
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">other scripts</a><br/>
+                    <span>Trigger processes on data from </span>
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">cables</a>
+                    <span> and </span>
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">APIs</a><br/>
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">Plugin for QGIS</a>
+                    <span> and </span>
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">various geospatial analyses</a><br/>
+                    <span>Collection, management and/or analyses on data from </span>
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">oceanic waves</a>,
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">remote sensing</a>,
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">e-commerce</a> and
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">MMA</a><br />
+                </div>
             </section>
 
             <section id="portfolio" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
                 <h1 class="text-2xl">Portfolio</h1>
-                <div class="container grid grid-cols-3">
-                    <div class="my-3">Abc</div>
-                    <div class="image-carousel col-span-2 grid grid-cols-3 my-3">
-                        <img class="h-auto w-full" th:each="image: ${images}" th:src="${'/img/scraper_gui/' + image}" alt="Image 1">
+                <div class="container grid grid-cols-2">
+                    <div class="shadow-lg border border-gray-300 rounded relative m-3" th:each="project: ${projects}">
+                        <h2 th:text="${project.title}">Title</h2>
+                        <div class="image-carousel">
+                            <div th:each="alt, stat: ${project.alts}">
+                                <img class="h-full w-full object-cover z-0 relative p-4" th:src="${'/img/' + project.imageDir +'/' + (stat.index + 1) + '.png'}">
+                                <p class="text-center mt-2" th:text="${alt}">Subtitle</p>
+                            </div>
+                        </div>
+                        <ol class="flex items-center justify-center">
+                            <li th:each="tool: ${project.tools}" th:text="${tool}" class="m-2 px-4 py-1 bg-gray-300 rounded-full">Tool</li>
+                        </ol>
+                        <a th:if="${!#strings.isEmpty(project.github)}" th:href="${project.github}" target="_blank" class="flex items-center justify-center">
+                            <img th:src="@{img/github.png}" class="m-2 w-16 h-16">
+                        </a>
                     </div>
                 </div>
 
@@ -95,6 +135,28 @@
 
             <section id="contact" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
                 <h1 class="text-2xl">Contact</h1>
+                <form action="#" th:action="@{/contact}" method="post" th:object="${message}">
+                    <div class="grid grid-cols-2 my-1">
+                        <label class="my-1 text-right pr-4">Name</label>
+                        <input type="text" th:field="*{name}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-1/2"/>
+                    </div>
+                    <div class="grid grid-cols-2 my-1">
+                        <label class="my-1 text-right pr-4">E-mail</label>
+                        <input type="text" th:field="*{email}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-1/2"/>
+                    </div>
+                    <div class="grid grid-cols-2 my-1">
+                        <label class="my-1 text-right pr-4">Phone</label>
+                        <input type="text" th:field="*{phone}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-1/2"/>
+                    </div>
+                    <div class="grid grid-cols-2 my-1">
+                        <label class="my-1 text-right pr-4">Message</label>
+                        <textarea rows="3" cols="25" th:field="*{content}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-1/2"/>
+                    </div>
+                    <div class="grid grid-cols-2 my-1">
+                        <span></span>
+                        <button type="submit" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-1/2">Send</button>
+                    </div>
+                </form>
             </section>
 
         </div>
@@ -103,9 +165,10 @@
     <script>
         $(document).ready(function(){
             $('.image-carousel').slick({
+                dots: true,
                 arrows: true,
-                prevArrow: '<button class="slick-prev w-1/6 h-auto font-bold text-4xl inset-y-0 right-0" aria-label="Previous" type="button"><</button>',
-                nextArrow: '<button class="slick-next w-1/6 h-auto font-bold text-4xl" aria-label="Next" type="button">></button>',
+                prevArrow: '<button class="slick-prev flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 left-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10" aria-label="Previous" type="button"><</button>',
+                nextArrow: '<button class="slick-next flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 right-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10" aria-label="Next" type="button">></button>',
             })
         });
     </script>
