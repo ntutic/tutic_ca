@@ -1,38 +1,46 @@
 [
   {
-    "title": "Control Panel for Farming Device (1)",
-    "description": "Integrated desktop application to monitor and control agricultural machines.",
-    "imageDir": "farmer_panel",
+    "title": "Control Panels for Farming Machines",
+    "imageDir": "panels",
     "alts": [
-      "Two-way communication with device",
-      "Mockable data for development",
-      "Fully customizable labels",
-      "Configurable connection and data inputs"
+      "Two-way communication with devices",
+      "Configurable interface, labels and connection settings",
+      "Shipped as a native Windows application",
+      "Mockable data and connections for development"
     ],
     "tools": [
       "Python",
       "Qt",
-      "PyModbus"
+      "nuitka"
     ]
   },
   {
-    "title": "Scraping Scripts Launcher",
-    "description": "Manager and launcher for various related scraping scripts.",
+    "title": "Script Launcher",
     "imageDir": "scraper_gui",
     "alts": [
-      "Launcher with per-script configs",
-      "Control scraper behavior",
-      "Handle data pipelines for output",
-      "Seemlessly add new scripts to client's machine"
+      "Comes with per-script configs",
+      "Seemlessly add new scripts to client's machine",
+      "Handle output pipelines",
+      "Control scraper behavior"
     ],
     "tools": [
       "Python",
       "Qt",
       "AWS",
-      "Selenium",
       "SQL"
     ]
   },
+  {
+    "title": "Data Collection and Management",
+    "imageDir": "",
+    "alts": [
+      ""
+    ],
+    "tools": [
+      ""
+    ]
+  },
+
   {
     "title": "Modbus Data Stream Monitoring",
     "description": "Process for monitoring a Modbus data stream and trigger actions on certain ",
@@ -43,25 +51,7 @@
       "Configurable processes and logging"
     ],
     "tools": [
-      "Python",
-      "PyModbus",
-      "pystray"
-    ]
-  },
-  {
-    "title": "Control Panel for Farming Device (2)",
-    "description": "Integrated desktop application to control agricultural machines ",
-    "imageDir": "rotary_panel",
-    "alts": [
-      "Two-way communication with device",
-      "Monitor current status of device",
-      "Configure machine with access control",
-      "Shipped to clients as executable app"
-    ],
-    "tools": [
-      "Python",
-      "PyModbus",
-      "nuitka"
+      "Python"
     ]
   },
   {

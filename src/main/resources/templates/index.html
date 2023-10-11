@@ -2,9 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
-        <title>Portfolio</title>
+        <title>Nikola Tutić</title>
         <link th:href="@{/css/main.css}" rel="stylesheet" />
         <link th:href="@{/css/dots.css}" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.png}" >
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <script
@@ -170,6 +171,16 @@
                 prevArrow: '<button class="slick-prev flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 left-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10" aria-label="Previous" type="button"><</button>',
                 nextArrow: '<button class="slick-next flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 right-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10" aria-label="Next" type="button">></button>',
             })
+        });
+
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top - 125/* Navbar's height */
+                }, 500);
+            }
         });
     </script>
 </html>
