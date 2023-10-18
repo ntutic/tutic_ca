@@ -1,20 +1,20 @@
 [
   {
-    "employer": "UpWork & self",
-    "url": "https://www.upwork.com/freelancers/~01d06d647eb569a541",
+    "employer": "UpWork",
+    "url": "https://www.upwork.com/",
     "title": "Freelance Developer",
     "period": "2022 - 2023",
-    "location": "Remote",
-    "description": "GUIs, data parsing, databases, scraping",
-    "descriptionExtra": "5.00/5.00☆, $5k+",
-    "urlText": "View UpWork profile",
+    "location": "Remote / Travelling",
+    "description": "GUIs, scripting, data scraping and processing",
+    "descriptionExtra": "",
+    "urlText": "View my profile (5.00/5.00☆, $5k+)",
     "urlLink": "https://www.upwork.com/freelancers/~01d06d647eb569a541"
   },
   {
     "employer": "Oneka Technologies",
     "url": "https://www.onekawater.com/",
-    "title": "Laborer",
-    "period": "2021",
+    "title": "Contractual",
+    "period": "2021 - 2023",
     "location": "Shebrooke (QC), Canada",
     "description": "Offices construction, benchmark testing"
   },
@@ -59,7 +59,7 @@
     "description": "Botany, sampling, taxonomy"
   },
   {
-    "employer": "Environment Ministry of Quebec (MELCC)",
+    "employer": "Environment Ministry of Quebec",
     "url": "https://www.environnement.gouv.qc.ca/",
     "title": "Analyst",
     "period": "2016",

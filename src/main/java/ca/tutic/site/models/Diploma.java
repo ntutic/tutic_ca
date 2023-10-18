@@ -8,5 +8,6 @@ public class Diploma {
     private String school;
     private String diploma;
     private String period;
+    private String location;
     public Diploma() {}
 }

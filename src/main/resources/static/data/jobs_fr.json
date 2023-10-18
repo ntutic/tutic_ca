@@ -1,21 +1,21 @@
 [
   {
-    "employer": "UpWork ",
+    "employer": "UpWork",
     "url": "https://www.upwork.com/",
     "title": "Développement ",
     "period": "2022 - 2023",
-    "location": "À distance",
-    "description": "GUI, scripts, traitement et collecte de données",
-    "descriptionExtra": "5.00/5.00☆, >7k$",
+    "location": "À distance / Voyage",
+    "description": "Interfaces, scripts, collecte et traitement de données",
+    "descriptionExtra": "",
     "urlLink": "https://www.upwork.com/freelancers/~01d06d647eb569a541",
-    "urlText": "Voir mon profil"
+    "urlText": "Voir mon profil (5.00/5.00☆, >7k$)"
   },
   {
     "employer": "Oneka Technologies",
     "url": "https://www.onekawater.com/",
-    "title": "Aide ",
+    "title": "Contractant",
     "period": "2021 - 2023",
-    "location": "Shebrooke (Québec), Canada",
+    "location": "Shebrooke (QC), Canada",
     "description": "Scripts, construction, surveillance de tests"
   },
   {
@@ -23,7 +23,7 @@
     "url": "https://cobaver-vs.org",
     "title": "Chargé de projets",
     "period": "2019 - 2020",
-    "location": "Saint-Polycarpe (Québec), Canada",
+    "location": "Saint-Polycarpe (QC), Canada",
     "description": "GIS, concertation"
   },
   {
@@ -31,7 +31,7 @@
     "url": "https://eaugaspesiesud.org/",
     "title": "Chargé de projets",
     "period": "2018 - 2019",
-    "location": "Bonaventure (Québec), Canada",
+    "location": "Bonaventure (QC), Canada",
     "description": "Suivis environnementaux, surveillance"
   },
   {
@@ -39,7 +39,7 @@
     "url": "https://en.wikipedia.org/wiki/Sykes_Enterprises",
     "title": "Support Technique",
     "period": "2017 - 2018",
-    "location": "Sherbrooke (Québec), Canada",
+    "location": "Sherbrooke (QC), Canada",
     "description": "Aide à la clientèle, supervision"
   },
   {
@@ -47,7 +47,7 @@
     "url": "https://www.agropol.ca/",
     "title": "Agro-entrepreneur",
     "period": "2016 - 2017",
-    "location": "Sherbrooke (Québec), Canada",
+    "location": "Sherbrooke (QC), Canada",
     "description": "Production maraîchère, vente"
   },
   {
@@ -55,7 +55,7 @@
     "url": "http://www.billshipley.recherche.usherbrooke.ca/",
     "title": "Assistant de recherche",
     "period": "2015 - 2016",
-    "location": "Sherbrooke (Québec), Canada",
+    "location": "Sherbrooke (QC), Canada",
     "description": "Botany, sampling, taxonomy"
   },
   {
@@ -63,7 +63,7 @@
     "url": "https://www.environnement.gouv.qc.ca/",
     "title": "Analyste au secteur de l'eau",
     "period": "2016",
-    "location": "Rimouski (Québec), Canada",
+    "location": "Rimouski (QC), Canada",
     "description": "Environmental permitting"
   },
   {
@@ -79,7 +79,7 @@
     "url": "https://www.soest.hawaii.edu/soestwp/tech/facilities/hawaii-tree-snail-conservation-laboratory/",
     "title": "Assistant de recherche",
     "period": "2014",
-    "location": "Honolulu (Hawaii), USA",
+    "location": "Honolulu (HI), USA",
     "description": "Génétique des populations"
   }
 ]
