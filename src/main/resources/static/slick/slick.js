@@ -2768,7 +2768,7 @@
 
         var _ = this,
             edgeWasHit = false,
-            curLeft, swipeDirection, swipeLength, positionOffset, touches, verticalSwipeLength;
+            curleft, swipeDirection, swipeLength, positionOffset, touches, verticalSwipeLength;
 
         touches = event.originalEvent !== undefined ? event.originalEvent.touches : null;
 
@@ -2776,7 +2776,7 @@
             return false;
         }
 
-        curLeft = _.getLeft(_.currentSlide);
+        curleft = _.getLeft(_.currentSlide);
 
         _.touchObject.curX = touches !== undefined ? touches[0].pageX : event.clientX;
         _.touchObject.curY = touches !== undefined ? touches[0].pageY : event.clientY;
@@ -2821,12 +2821,12 @@
         }
 
         if (_.options.vertical === false) {
-            _.swipeLeft = curLeft + swipeLength * positionOffset;
+            _.swipeLeft = curleft + swipeLength * positionOffset;
         } else {
-            _.swipeLeft = curLeft + (swipeLength * (_.$list.height() / _.listWidth)) * positionOffset;
+            _.swipeLeft = curleft + (swipeLength * (_.$list.height() / _.listWidth)) * positionOffset;
         }
         if (_.options.verticalSwiping === true) {
-            _.swipeLeft = curLeft + swipeLength * positionOffset;
+            _.swipeLeft = curleft + swipeLength * positionOffset;
         }
 
         if (_.options.fade === true || _.options.touchMove === false) {

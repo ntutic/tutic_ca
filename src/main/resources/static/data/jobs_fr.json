@@ -1,0 +1,85 @@
+[
+  {
+    "employer": "UpWork ",
+    "url": "https://www.upwork.com/",
+    "title": "Développement ",
+    "period": "2022 - 2023",
+    "location": "À distance",
+    "description": "GUI, scripts, traitement et collecte de données",
+    "descriptionExtra": "5.00/5.00☆, >7k$",
+    "urlLink": "https://www.upwork.com/freelancers/~01d06d647eb569a541",
+    "urlText": "Voir mon profil"
+  },
+  {
+    "employer": "Oneka Technologies",
+    "url": "https://www.onekawater.com/",
+    "title": "Aide ",
+    "period": "2021 - 2023",
+    "location": "Shebrooke (Québec), Canada",
+    "description": "Scripts, construction, surveillance de tests"
+  },
+  {
+    "employer": "Organisme de bassin versant de Vaudreuil-Soulanges",
+    "url": "https://cobaver-vs.org",
+    "title": "Chargé de projets",
+    "period": "2019 - 2020",
+    "location": "Saint-Polycarpe (Québec), Canada",
+    "description": "GIS, concertation"
+  },
+  {
+    "employer": "Conseil de l'eau Gaspésie Sud",
+    "url": "https://eaugaspesiesud.org/",
+    "title": "Chargé de projets",
+    "period": "2018 - 2019",
+    "location": "Bonaventure (Québec), Canada",
+    "description": "Suivis environnementaux, surveillance"
+  },
+  {
+    "employer": "Sykes Enterprises",
+    "url": "https://en.wikipedia.org/wiki/Sykes_Enterprises",
+    "title": "Support Technique",
+    "period": "2017 - 2018",
+    "location": "Sherbrooke (Québec), Canada",
+    "description": "Aide à la clientèle, supervision"
+  },
+  {
+    "employer": "Écollab (maintenant Agropol)",
+    "url": "https://www.agropol.ca/",
+    "title": "Agro-entrepreneur",
+    "period": "2016 - 2017",
+    "location": "Sherbrooke (Québec), Canada",
+    "description": "Production maraîchère, vente"
+  },
+  {
+    "employer": "Lab d'écologie végétale (Université de Sherbrooke)",
+    "url": "http://www.billshipley.recherche.usherbrooke.ca/",
+    "title": "Assistant de recherche",
+    "period": "2015 - 2016",
+    "location": "Sherbrooke (Québec), Canada",
+    "description": "Botany, sampling, taxonomy"
+  },
+  {
+    "employer": "Ministère de l'environnement du Québec",
+    "url": "https://www.environnement.gouv.qc.ca/",
+    "title": "Analyste au secteur de l'eau",
+    "period": "2016",
+    "location": "Rimouski (Québec), Canada",
+    "description": "Environmental permitting"
+  },
+  {
+    "employer": "Lab d'entomologie tropicale (ECOFOG)",
+    "url": "https://www.ecofog.gf/",
+    "title": "Assistant de recherche",
+    "period": "2015",
+    "location": "Kourou (Guyane française), France",
+    "description": "Collecte d'arthropodes, indentification"
+  },
+  {
+    "employer": "Lab de conservation d'escargots menacés (University of Hawaii)",
+    "url": "https://www.soest.hawaii.edu/soestwp/tech/facilities/hawaii-tree-snail-conservation-laboratory/",
+    "title": "Assistant de recherche",
+    "period": "2014",
+    "location": "Honolulu (Hawaii), USA",
+    "description": "Génétique des populations"
+  }
+]

@@ -4,7 +4,9 @@ import lombok.Data;
 
 @Data
 public class Diploma {
+    private String url;
     private String school;
     private String diploma;
     private String period;
+    public Diploma() {}
 }

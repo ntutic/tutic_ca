@@ -10,8 +10,22 @@
     ],
     "tools": [
       "Python",
-      "Qt",
-      "nuitka"
+      "GUI"
+    ]
+  },
+  {
+    "title": "Data Collection and Management",
+    "imageDir": "scraping",
+    "alts": [
+      "Gather data from the web: geospatial, e-commerce, sports, ...",
+      "Clean and present data",
+      "Host on cloud for farming equipment"
+
+    ],
+    "tools": [
+      "Python",
+      "Cloud",
+      "GUI"
     ]
   },
   {
@@ -25,19 +39,9 @@
     ],
     "tools": [
       "Python",
-      "Qt",
+      "GUI",
       "AWS",
       "SQL"
-    ]
-  },
-  {
-    "title": "Data Collection and Management",
-    "imageDir": "",
-    "alts": [
-      ""
-    ],
-    "tools": [
-      ""
     ]
   },
 
@@ -51,7 +55,8 @@
       "Configurable processes and logging"
     ],
     "tools": [
-      "Python"
+      "Python",
+      "GUI"
     ]
   },
   {
@@ -66,7 +71,8 @@
     "tools": [
       "VBA",
       "AWS",
-      "SQL"
+      "SQL",
+      "GUI"
     ]
   },
   {
@@ -75,25 +81,30 @@
     "imageDir": "portfolio_site",
     "alts": [
       "The website you are currently browsing",
-      "Native GraalVM image hosted on EC2 instance"
+      "Native GraalVM docker image hosted on EC2 instance"
     ],
     "tools": [
       "Java",
-      "Spring Boot",
-      "HTML",
-      "TailwindCSS"
+      "Spring",
+      "Web"
     ],
     "github": "https://github.com/ntutic/tutic_ca"
   },
   {
-    "title": "",
-    "description": "",
-    "imageDir": "",
+    "title": "Miscelleaneous",
+    "imageDir": "misc",
     "alts": [
-      ""
+      "CLI, utility or systems scripts",
+      "Courses, books and exploration"
+
+
     ],
     "tools": [
-      ""
-    ]
+      "Python",
+      "Java",
+      "C",
+      "Web"
+    ],
+    "github": "https://github.com/ntutic"
   }
 ]

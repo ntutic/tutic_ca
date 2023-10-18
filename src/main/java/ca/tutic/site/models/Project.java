@@ -6,6 +6,7 @@ import java.util.List;
 
 @Data
 public class Project {
+    public Project() {}
     private String title;
     private String description;
     private String imageDir;

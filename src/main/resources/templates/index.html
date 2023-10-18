@@ -5,17 +5,14 @@
         <title>Nikola Tutić</title>
         <link th:href="@{/css/main.css}" rel="stylesheet" />
         <link th:href="@{/css/dots.css}" rel="stylesheet" />
-        <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.png}" >
+        <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.png}">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <script
-                src="https://code.jquery.com/jquery-3.7.1.min.js"
-                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-                crossorigin="anonymous">
-        </script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.js"></script>
+        <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
         <style>
             body {
                 font-family: 'Lato', sans-serif;
@@ -27,42 +24,68 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body class="bg-gray-100 text-center">
+    <body class="bg-gray-100 text-center" hx-boost="true">
         <header class="fixed top-0 w-full z-20">
             <nav class="bg-white shadow-lg border-b border-gray-300">
-                <div class="container mx-auto flex justify-between items-center py-10 px-20">
-                    <div class="text-xl font-semibold">
-                        <a href="#">Nikola Tutić</a>
+                <div class="container mx-auto flex md:justify-center py-4 md:py-10 px-10 md:px-32">
+                    <div class="hidden md:flex space-x-12">
+                        <ul class="flex space-x-12">
+                            <li><a th:href="'/change-locale/' + ${#locale.language == 'en' ? 'fr' : 'en'}" th:text="${#locale.language == 'en' ? 'FR' : 'EN'}" class="text-gray-600 hover:font-bold">EN</a></li>
+                            <li><a href="#about" th:text="#{nav.about}" >About</a></li>
+                            <li><a href="#portfolio" th:text="#{nav.portfolio}" class="text-gray-600 hover:font-bold">Portfolio</a></li>
+                            <li><a href="#education" th:text="#{nav.education}" class="text-gray-600 hover:font-bold">Education</a></li>
+                            <li><a href="#work" th:text="#{nav.work}" class="text-gray-600 hover:font-bold">Work Experience</a></li>
+                            <li><a href="#contact" th:text="#{nav.contact}" class="text-gray-600 hover:font-bold">Contact</a></li>
+                        </ul>
                     </div>
 
-                    <ul class="flex space-x-12">
-                        <li><a href="#about" class="text-gray-600 hover:font-bold">About</a></li>
-                        <li><a href="#portfolio" class="text-gray-600 hover:font-bold">Portfolio</a></li>
-                        <li><a href="#education" class="text-gray-600 hover:font-bold">Education</a></li>
-                        <li><a href="#work" class="text-gray-600 hover:font-bold">Work Experience</a></li>
-                        <li><a href="#contact" class="text-gray-600 hover:font-bold">Contact</a></li>
-                    </ul>
+                    <div class="md:hidden">
+                        <button id="mb-show" class="align-middle z-49">
+                            <img th:src="@{/img/menu.png}" width="30" height="30"/>
+                        </button>
+                        
+                        <div id="mb-menu" class="absolute hidden w-screen top-0 left-0 z-50 shadow-lg border-b border-gray-300">
+                            <ul>
+                                <li><a href="#about" th:text="#{nav.about}" class="block py-1 px-4 bg-white hover:bg-gray-200 hover:font-bold">About</a></li>
+                                <li><a href="#portfolio" th:text="#{nav.portfolio}" class="block py-1 px-4 bg-white hover:bg-gray-200 hover:font-bold">Portfolio</a></li>
+                                <li><a href="#education" th:text="#{nav.education}" class="block py-1 px-4 bg-white hover:bg-gray-200 hover:font-bold">Education</a></li>
+                                <li><a href="#work" th:text="#{nav.work}" class="block py-1 px-4 bg-white hover:bg-gray-200 hover:font-bold">Work Experience</a></li>
+                                <li><a href="#contact" th:text="#{nav.contact}" class="block py-1 px-4 bg-white hover:bg-gray-200 hover:font-bold">Contact</a></li>
+                                <li id="mb-hide" class="block py-1 px-4 bg-white hover:bg-gray-200 hover:font-bold">
+                                    <button>
+                                        <img th:src="@{/img/up.png}" width="30" height="30" class="z-50"/>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </header>
 
-        <div id="filler" class="container py-14"></div>
+        <div id="filler" class="container py-7 md:py-14"></div>
         <div class="container mx-auto">
 
-            <section id="about" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
-                <h1 class="text-2xl">About</h1>
-                <div class="grid grid-cols-2 my-3">
-                    <div class="container text-right pr-4">
-                        <p class="text-gray-400">Who</p>
-                        <p>Biologist turned developer</p>
+            <section id="about" class="justify-center bg-white rounded-lg shadow-lg mx-auto my-6 py-10 px-10 md:px-20 w-full md:w-3/4">
+                <h1 th:text="#{nav.about}" class="text-2xl">About</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="container md:text-right my-3 md:px-4">
+                        <p th:text="#{about.who}" class="text-gray-500">Who</p>
+                        <p>Nikola Tutić</p>
+                        <p th:text="#{about.who_content}">About me</p>
                     </div>
-                    <div class="container text-left pr-4">
-                        <p class="text-gray-400">Why</p>
-                        <p>To automate, analyze and </p>
+                    <div class="md:text-left my-3 md:px-4">
+                        <p th:text="#{about.where}" class="text-gray-500">Where</p>
+                        <p>Montréal</p>
+                        <p>+1 819 ...-....</p>
+                        <p>contact@tutic.ca</p>
                     </div>
+
                 </div>
                 <div class="my-3">
-                    <p class="text-gray-400">What</p>
+                    <p th:text="#{about.what}" class="text-gray-500">What</p>
+                    <p  th:text="#{about.what_content}">What do I do</p>
+                    <!--
                     <span>Launcher for</span>
                     <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">agriculture machines</a>
                     <span> and </span>
@@ -79,108 +102,201 @@
                     <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">remote sensing</a>,
                     <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">e-commerce</a> and
                     <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">MMA</a><br />
+                    -->
                 </div>
             </section>
 
-            <section id="portfolio" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
-                <h1 class="text-2xl">Portfolio</h1>
-                <div class="container grid grid-cols-2">
-                    <div class="shadow-lg border border-gray-300 rounded relative m-3" th:each="project: ${projects}">
+            <section id="portfolio" class="bg-white rounded-lg shadow-lg mx-auto my-6 py-10 px-5 md:px-20 w-full md:w-3/4">
+                <h1 th:text="#{nav.portfolio}" class="text-2xl">Portfolio</h1>
+                <ol class="flex flex-wrap items-center justify-center">
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="Python">Python</button>
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="Java">Java</button>
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="GIS">GIS</button>
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="SQL">SQL</button>
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="VBA">VBA</button>
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="AWS">AWS</button>
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="GUI">GUI</button>
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="Web">Web</button>
+                </ol>
+
+                <div class="container grid grid-cols-1 md:grid-cols-2">
+                    <div class="project shadow-lg border border-gray-300 rounded relative m-1 md:m-3" th:each="project: ${projects}">
                         <h2 th:text="${project.title}">Title</h2>
                         <div class="image-carousel">
                             <div th:each="alt, stat: ${project.alts}">
-                                <img class="h-full w-full object-cover z-0 relative p-4" th:src="${'/img/' + project.imageDir +'/' + (stat.index + 1) + '.png'}">
+                                <img class="h-full w-full object-cover z-0 relative p-4" th:src="${'/img/' + project.imageDir +'/' + (stat.index + 1) + '.png'}" loading="lazy">
                                 <p class="text-center mt-2" th:text="${alt}">Subtitle</p>
                             </div>
                         </div>
-                        <ol class="flex items-center justify-center">
-                            <li th:each="tool: ${project.tools}" th:text="${tool}" class="m-2 px-4 py-1 bg-gray-300 rounded-full">Tool</li>
+                        <ol class="flex flex-wrap items-center justify-center">
+                            <li th:each="tool: ${project.tools}" th:attr="data-tag=${tool}" th:text="${tool}" class="m-2 px-4 py-1 bg-gray-300 rounded-full">Tool</li>
                         </ol>
                         <a th:if="${!#strings.isEmpty(project.github)}" th:href="${project.github}" target="_blank" class="flex items-center justify-center">
                             <img th:src="@{img/github.png}" class="m-2 w-16 h-16">
                         </a>
                     </div>
                 </div>
-
             </section>
 
-            <section id="education" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
-                <h1 class="text-2xl">Education</h1>
+            <section id="education" class="bg-white rounded-lg shadow-lg mx-auto my-6 py-10 px-10 md:px-20 w-full md:w-3/4">
+                <h1 th:text="#{nav.education}" class="text-2xl">Education</h1>
                 <div class="grid grid-cols-2 my-3" th:each="diploma: ${diplomas}">
                     <div class="container text-right pr-4">
-                        <p th:text="${diploma.school}" class="text-gray-400">School</p>
-                        <p th:text="${diploma.diploma}">Diploma</p>
+                        <p th:text="${diploma.school}" class="text-gray-500">School</p>
+                        <a th:text="${diploma.diploma}" th:href="${diploma.url}" class="underline hover:font-bold">Diploma</a>
                     </div>
                     <div class="container text-left pl-4">
-                        <p th:text="${diploma.period}" class="text-gray-400">Start - End</p>
+                        <p th:text="${diploma.period}" class="text-gray-500">Start - End</p>
                     </div>
                 </div>
             </section>
 
-            <section id="work" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
-                <h1 class="text-2xl">Work Experience</h1>
+            <section id="work" class="bg-white rounded-lg shadow-lg mx-auto my-6 py-10 px-10 md:px-20 w-full md:w-3/4">
+                <h1 th:text="#{nav.work}" class="text-2xl">Work Experience</h1>
                 <div class="grid grid-cols-2 my-3" th:each="job: ${jobs}">
                     <div class="container text-right pr-4">
-                        <p th:text="${job.employer}" class="text-gray-400">Employer</p>
+                        <a th:text="${job.employer}" th:href="${job.url}" target="_blank" class="text-gray-500 underline hover:font-bold visited:text-purple-600">Employer</a>
                         <p th:text="${job.title}">Title</p>
-                        <a th:text="${job.urlText}" th:href="${job.urlLink}" target="_blank" class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">URL</a>
+                        <a th:text="${job.urlText}" th:href="${job.urlLink}" target="_blank" class="underline text-blue-600 font-bold hover:font-bold visited:text-purple-600">URL</a>
 
                     </div>
                     <div class="container text-left pl-4">
-                        <p th:text="${job.period}" class="text-gray-400">Start - End</p>
+                        <p th:text="${job.period}" class="text-gray-500">Start - End</p>
                         <p th:text="${job.description}">Description</p>
                         <p th:text="${job.descriptionExtra}">Description Extra</p>
                     </div>
                 </div>
             </section>
 
-            <section id="contact" class="bg-white rounded-lg shadow-lg mx-auto py-10 px-20 my-6 w-3/4">
-                <h1 class="text-2xl">Contact</h1>
-                <form action="#" th:action="@{/contact}" method="post" th:object="${message}">
+            <section id="contact" class="bg-white rounded-lg shadow-lg mx-auto my-6 py-10 px-10 md:px-20 w-full md:w-3/4">
+                <h1 th:text="#{nav.contact}" class="text-2xl">Contact</h1>
+                <form id="contact-form" th:action="@{/contact}" method="post" th:object="${message}">
                     <div class="grid grid-cols-2 my-1">
-                        <label class="my-1 text-right pr-4">Name</label>
-                        <input type="text" th:field="*{name}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-1/2"/>
+                        <label th:text="#{contact.name}" class="my-1 text-right pr-4">Name</label>
+                        <input type="text" th:field="*{name}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-7/8 md:w-1/2"/>
                     </div>
                     <div class="grid grid-cols-2 my-1">
-                        <label class="my-1 text-right pr-4">E-mail</label>
-                        <input type="text" th:field="*{email}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-1/2"/>
+                        <label th:text="#{contact.mail}" class="my-1 text-right pr-4">E-mail</label>
+                        <input type="text" th:field="*{email}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-7/8 md:w-1/2"/>
                     </div>
                     <div class="grid grid-cols-2 my-1">
-                        <label class="my-1 text-right pr-4">Phone</label>
-                        <input type="text" th:field="*{phone}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-1/2"/>
+                        <label th:text="#{contact.phone}" class="my-1 text-right pr-4">Phone</label>
+                        <input type="text" th:field="*{phone}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-7/8 md:w-1/2"/>
                     </div>
                     <div class="grid grid-cols-2 my-1">
-                        <label class="my-1 text-right pr-4">Message</label>
-                        <textarea rows="3" cols="25" th:field="*{content}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-1/2"/>
+                        <label th:text="#{contact.content}" class="my-1 text-right pr-4">Message</label>
+                        <textarea rows="3" cols="25" th:field="*{content}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-7/8 md:w-1/2"/>
                     </div>
                     <div class="grid grid-cols-2 my-1">
                         <span></span>
-                        <button type="submit" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-1/2">Send</button>
+                        <button th:text="#{contact.button}" th:alt="#{contact.sending}" type="submit" id="contact-submit" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-7/8 md:w-1/2">Send</button>
                     </div>
                 </form>
             </section>
-
         </div>
     </body>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
+            // Image carousels
             $('.image-carousel').slick({
                 dots: true,
                 arrows: true,
-                prevArrow: '<button class="slick-prev flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 left-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10" aria-label="Previous" type="button"><</button>',
-                nextArrow: '<button class="slick-next flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 right-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10" aria-label="Next" type="button">></button>',
+                prevArrow: '<button class="slick-prev flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 left-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10 ml-4" aria-label="Previous" type="button"><</button>',
+                nextArrow: '<button class="slick-next flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 right-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10 mr-4" aria-label="Next" type="button">></button>',
             })
+
+            // Smooth scroll for navbar
+            let offset;
+            if (window.innerWidth >= 768) {
+                 offset = 125;
+            } else {
+                offset = 80;
+            }
+            $('a[href^="#"]').on('click', function(event) {
+                let target = $(this.getAttribute('href'));
+                if (history.pushState) {
+                    history.pushState(null, null, this.getAttribute('href'));
+                } else {
+                    location.hash = this.getAttribute('href');
+                }
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - offset/* Navbar's height */
+                    }, 500);
+                }
+            });
+
+            // Mobile menu toggle
+            $("#mb-show").click(function() {
+                $("#mb-menu").show("slide", {direction: "up"}, 200);
+            });
+            $("#mb-hide").click(function() {
+                $("#mb-menu").hide("slide", {direction: "up"}, 200);
+            });
+            $("#mb-menu a").click(function() {
+                $("#mb-menu").hide("slide", {direction: "up"}, 200);
+            });
+
+            // Project toggles
+            let activeTags = new Set();
+            $('.filter-button').on('click', function() {
+                const tag = $(this).data('tag');
+                if (activeTags.has(tag)) {
+                    activeTags.delete(tag);
+                    $(this).removeClass('active');
+                    $(this).removeClass('bg-gray-300').addClass('bg-gray-100');
+                } else {
+                    activeTags.add(tag);
+                    $(this).addClass('active');
+                    $(this).removeClass('bg-gray-100').addClass('bg-gray-300');
+                }
+                $('.project').each(function() {
+                    const card = $(this);
+                    let cardHasActiveTag = false;
+                    card.find('li').each(function() {
+                        if (activeTags.has($(this).data('tag'))) {
+                            cardHasActiveTag = true;
+                        }
+                    });
+                    if (cardHasActiveTag || activeTags.size === 0) {
+                        card.show();
+                    } else {
+                        card.hide();
+                    }
+                });
+            });
         });
 
-        $('a[href^="#"]').on('click', function(event) {
-            var target = $(this.getAttribute('href'));
-            if (target.length) {
-                event.preventDefault();
-                $('html, body').stop().animate({
-                    scrollTop: target.offset().top - 125/* Navbar's height */
-                }, 500);
-            }
+        // Handle form submission no-reload
+        $(document).ready(function() {
+            $('#contact-form').on('submit', function(e) {
+                e.preventDefault();
+                let $submitButton = $('#contact-submit');
+
+                let originalButtonText = $submitButton.text();
+                console.log($submitButton.attr("alt"));
+                $submitButton.text($submitButton.attr("alt"));
+                $submitButton.prop('disabled', true);
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                       alert(response);
+                    },
+                    error: function() {
+                        // Handle error scenario, e.g., network error
+                        alert('An error occurred. Please try again later.');
+                    },
+                    complete: function() {
+                        $submitButton.text(originalButtonText);  // Restore the original button text
+                        $submitButton.prop('disabled', false);  // Re-enable the button
+                    }
+                });
+            });
         });
+
     </script>
 </html>

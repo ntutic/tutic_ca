@@ -1,19 +1,19 @@
 [
   {
     "school": "Collège Bois-de-Boulogne",
-    "diploma": "Big Data Development (AEC)",
+    "diploma": "Développeur en mégadonnées (AEC)",
     "period": "2022 - 2023",
     "url": "https://www.bdeb.qc.ca/formation/specialiste-en-megadonnees-college-de-bois-de-boulogne-a-montreal/"
   },
   {
     "school": "Université de Sherbrooke",
-    "diploma": "Geomatics (DESS)",
+    "diploma": "Géomatique (DESS)",
     "period": "2020 - 2021",
     "url": "https://www.usherbrooke.ca/admission/programme/52D/diplome-de-2e-cycle-en-geomatique-appliquee/"
   },
   {
     "school": "Université de Sherbrooke",
-    "diploma": "Ecology (bachelor)",
+    "diploma": "Écologie (bacc.)",
     "period": "2013 - 2016",
     "url": "https://www.usherbrooke.ca/admission/programme/269/baccalaureat-en-ecologie/"
   }

@@ -4,6 +4,8 @@ import lombok.Data;
 
 @Data
 public class Job {
+    public Job() {}
+    private String url;
     private String employer;
     private String title;
     private String period;

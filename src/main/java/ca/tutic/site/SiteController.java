@@ -2,22 +2,30 @@ package ca.tutic.site;
 
 import ca.tutic.site.json.StaticService;
 import ca.tutic.site.models.Message;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.support.RequestContextUtils;
+
 
 import java.io.IOException;
 
 @Controller
 public class SiteController {
     private StaticService staticService;
+    private EmailService emailService;
+    private LocaleResolver localeResolver;
 
     @Autowired
-    public SiteController(StaticService staticService) {
+    public SiteController(StaticService staticService, EmailService emailService, LocaleResolver localeResolver) {
         this.staticService = staticService;
+        this.emailService = emailService;
+        this.localeResolver = localeResolver;
     }
 
     @GetMapping("/")
@@ -30,9 +38,21 @@ public class SiteController {
     }
 
     @PostMapping("/contact")
-    public void sendMessage(@ModelAttribute("message") Message message) {
+    @ResponseBody
+    public String sendMessage(@ModelAttribute("message") Message message) {
         System.out.println(message);
+        return emailService.sendEmail(message);
     }
 
+    @RequestMapping("/change-locale/{lang}")
+    public String changeLocale(@PathVariable("lang") String lang,
+                               HttpServletRequest request,
+                               HttpServletResponse response) {
+        LocaleResolver localeResolver = RequestContextUtils.getLocaleResolver(request);
+        if (localeResolver != null) {
+            localeResolver.setLocale(request, response, StringUtils.parseLocaleString(lang));
+        }
+        return "redirect:/";
+    }
 
 }
