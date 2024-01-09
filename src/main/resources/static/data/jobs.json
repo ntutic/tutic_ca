@@ -2,21 +2,21 @@
   {
     "employer": "UpWork",
     "url": "https://www.upwork.com/",
-    "title": "Freelance Developer",
-    "period": "2022 - 2023",
-    "location": "Remote / Travelling",
-    "description": "GUIs, scripting, data scraping and processing",
+    "title": "Freelance developer",
+    "period": "2022 - Current",
+    "location": "Remote",
+    "description": "Applications, scripts, data scraping and processing",
     "descriptionExtra": "",
-    "urlText": "View my profile (5.00/5.00☆, $5k+)",
+    "urlText": "View my profile",
     "urlLink": "https://www.upwork.com/freelancers/~01d06d647eb569a541"
   },
   {
     "employer": "Oneka Technologies",
     "url": "https://www.onekawater.com/",
-    "title": "Contractual",
-    "period": "2021 - 2023",
+    "title": "Contractual technician",
+    "period": "2021 - Current",
     "location": "Shebrooke (QC), Canada",
-    "description": "Offices construction, benchmark testing"
+    "description": "Scripting, construction, benchmark testing"
   },
   {
     "employer": "Vaudreuil-Soulanges Watershed Organization",
@@ -24,7 +24,7 @@
     "title": "Project Manager",
     "period": "2019 - 2020",
     "location": "Saint-Polycarpe (QC), Canada",
-    "description": "Stakeholder outreach, grant seeking, GIS"
+    "description": "GIS, stakeholder outreach, grant seeking"
   },
   {
     "employer": "South Gaspésie Watershed Organization",
@@ -51,7 +51,7 @@
     "description": "Production, sales"
   },
   {
-    "employer": "Vegetal Ecology Lab at Université de Sherbrooke",
+    "employer": "Université de Sherbrooke",
     "url": "http://www.billshipley.recherche.usherbrooke.ca/",
     "title": "Research Assistant",
     "period": "2015 - 2016",
@@ -62,12 +62,12 @@
     "employer": "Environment Ministry of Quebec",
     "url": "https://www.environnement.gouv.qc.ca/",
     "title": "Analyst",
-    "period": "2016",
+    "period": "2015",
     "location": "Rimouski (QC), Canada",
     "description": "Environmental permitting"
   },
   {
-    "employer": "Tropical Ecology Lab at ECOFOG",
+    "employer": "UMR EcoFoG",
     "url": "https://www.ecofog.gf/",
     "title": "Research Assistant",
     "period": "2015",
@@ -75,7 +75,7 @@
     "description": "Entomology, sampling, taxonomy"
   },
   {
-    "employer": "Tree Snail Conservation Lab at University of Hawaii",
+    "employer": "University of Hawaii",
     "url": "https://www.soest.hawaii.edu/soestwp/tech/facilities/hawaii-tree-snail-conservation-laboratory/",
     "title": "Research Assistant",
     "period": "2014",

@@ -1,31 +1,42 @@
 [
   {
+    "title": "Chrome Extension to Enhance Timesheet App",
+    "imageDir": "clockify",
+    "alts": [
+      "Extend Clockify's timesheet for bulk weekly time entries",
+      "Used in a company of >50 people to simplify time management",
+      "No manual setup required for API data connection"
+    ],
+    "tools": [
+      "JavaScript",
+      "Plugin"
+    ]
+  },
+  {
     "title": "Control Panels for Farming Machines",
     "imageDir": "panels",
     "alts": [
-      "Two-way communication with devices",
+      "Two-way communication with devices (ex. mixers, feeders)",
       "Configurable interface, labels and connection settings",
       "Shipped as a native Windows application",
       "Mockable data and connections for development"
     ],
     "tools": [
       "Python",
-      "GUI"
+      "Desktop"
     ]
   },
   {
     "title": "Data Collection and Management",
     "imageDir": "scraping",
     "alts": [
-      "Gather data from the web, i.e. geospatial, e-commerce, sports",
-      "Clean and present data",
-      "Host on cloud for farming equipment"
-
+      "Gather, clean and present data from the web (ex. geospatial, e-commerce, sports)",
+      "Sync data and new scripts with client machines"
     ],
     "tools": [
       "Python",
       "Cloud",
-      "GUI"
+      "Desktop"
     ]
   },
   {
@@ -33,14 +44,13 @@
     "imageDir": "scraper_gui",
     "alts": [
       "Comes with per-script configs",
-      "Seemlessly add new scripts to client's machine",
       "Handle output pipelines",
       "Control scraper behavior"
     ],
     "tools": [
       "Python",
-      "GUI",
-      "AWS",
+      "Desktop",
+      "Cloud",
       "SQL"
     ]
   },
@@ -56,7 +66,7 @@
     ],
     "tools": [
       "Python",
-      "GUI"
+      "Desktop"
     ]
   },
   {
@@ -70,9 +80,9 @@
     ],
     "tools": [
       "VBA",
-      "AWS",
+      "Cloud",
       "SQL",
-      "GUI"
+      "Desktop"
     ]
   },
   {

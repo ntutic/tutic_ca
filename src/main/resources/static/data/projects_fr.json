@@ -1,5 +1,18 @@
 [
   {
+    "title": "Extension Chrome pour simplifier Clockify",
+    "imageDir": "clockify",
+    "alts": [
+      "Permet de générer une semaine de temps en un clic",
+      "Utilisé dans une compagnie de >50 employés pour saisie",
+      "Sans initialisation manuelle pour l'utilisateur"
+    ],
+    "tools": [
+      "JavaScript",
+      "Plugin"
+    ]
+  },
+  {
     "title": "GUIs et contrôleurs pour équipement de fermes",
     "imageDir": "panels",
     "alts": [
@@ -10,22 +23,21 @@
     ],
     "tools": [
       "Python",
-      "GUI"
+      "Desktop"
     ]
   },
   {
     "title": "Acquisition et gestion de données",
     "imageDir": "scraping",
     "alts": [
-      "Collecte depuis le web: géospatiale, commerce, sports, plus",
-      "Préparer et présenter des données",
-      "Coordination machines avec exécution sur cloud"
-
+      "Collecter, préparer et présenter des données du web",
+      "Synchronisation des données et nouveaux scripts sur les machines clientes"
     ],
     "tools": [
       "Python",
       "Cloud",
-      "GUI"
+      "Desktop",
+      "GIS"
     ]
   },
   {
@@ -33,14 +45,13 @@
     "imageDir": "scraper_gui",
     "alts": [
       "Configuration sauvegardée par script",
-      "Synchronisation des scripts accessible au client",
       "Différentes sorties de données",
       "Contrôle du comportement du programme"
     ],
     "tools": [
       "Python",
-      "GUI",
-      "AWS",
+      "Desktop",
+      "Cloud",
       "SQL"
     ]
   },
@@ -55,7 +66,7 @@
     ],
     "tools": [
       "Python",
-      "GUI"
+      "Desktop"
     ]
   },
   {
@@ -68,9 +79,9 @@
     ],
     "tools": [
       "VBA",
-      "AWS",
+      "Cloud",
       "SQL",
-      "GUI"
+      "Desktop"
     ]
   },
   {
@@ -96,9 +107,10 @@
     ],
     "tools": [
       "Python",
+      "JavaScript",
       "Java",
-      "C",
-      "Web"
+      "Web",
+      "GIS"
     ],
     "github": "https://github.com/ntutic"
   }

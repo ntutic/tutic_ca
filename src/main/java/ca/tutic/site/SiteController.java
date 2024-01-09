@@ -1,6 +1,7 @@
 package ca.tutic.site;
 
-import ca.tutic.site.json.StaticService;
+import ca.tutic.site.services.EmailService;
+import ca.tutic.site.services.StaticService;
 import ca.tutic.site.models.Message;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -44,7 +45,7 @@ public class SiteController {
         return emailService.sendEmail(message);
     }
 
-    @RequestMapping("/change-locale/{lang}")
+    @RequestMapping("/{lang}")
     public String changeLocale(@PathVariable("lang") String lang,
                                HttpServletRequest request,
                                HttpServletResponse response) {
@@ -55,4 +56,8 @@ public class SiteController {
         return "redirect:/";
     }
 
+    @GetMapping("/upwork")
+    public String toUpwork(){
+        return "redirect:https://www.upwork.com/freelancers/~01d06d647eb569a541";
+    }
 }

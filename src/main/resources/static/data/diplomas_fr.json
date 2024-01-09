@@ -2,9 +2,10 @@
   {
     "school": "Collège Bois-de-Boulogne",
     "diploma": "Développeur en mégadonnées (AEC)",
-    "period": "2022 - 2023",
+    "period": "2022 - Présent",
     "location": "À distance",
-    "url": "https://www.bdeb.qc.ca/formation/specialiste-en-megadonnees-college-de-bois-de-boulogne-a-montreal/"
+    "url": "https://www.bdeb.qc.ca/formation/specialiste-en-megadonnees-college-de-bois-de-boulogne-a-montreal/",
+    "extra": "Temps partiel de soir"
   },
   {
     "school": "Université de Sherbrooke",
@@ -15,7 +16,7 @@
   },
   {
     "school": "Université de Sherbrooke",
-    "diploma": "Écologie (bacc.)",
+    "diploma": "Écologie (baccalauréat)",
     "period": "2013 - 2016",
     "location": "Sherbrooke (QC), Canada",
     "url": "https://www.usherbrooke.ca/admission/programme/269/baccalaureat-en-ecologie/"

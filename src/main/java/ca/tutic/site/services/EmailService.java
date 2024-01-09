@@ -1,4 +1,4 @@
-package ca.tutic.site;
+package ca.tutic.site.services;
 
 import ca.tutic.site.models.Message;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package ca.tutic.site.json;
+package ca.tutic.site.configs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;

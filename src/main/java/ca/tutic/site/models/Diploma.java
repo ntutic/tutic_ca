@@ -9,5 +9,6 @@ public class Diploma {
     private String diploma;
     private String period;
     private String location;
+    private String extra;
     public Diploma() {}
 }

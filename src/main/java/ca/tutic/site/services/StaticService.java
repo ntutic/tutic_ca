@@ -1,4 +1,4 @@
-package ca.tutic.site.json;
+package ca.tutic.site.services;
 
 import ca.tutic.site.models.Diploma;
 import ca.tutic.site.models.Project;
@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 
 @Service
 public class StaticService {

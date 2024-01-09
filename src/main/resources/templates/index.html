@@ -3,16 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>Nikola Tutić</title>
+        <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.png}">
+        <link rel="stylesheet" th:href="@{/css/Lato.css}">
         <link th:href="@{/css/main.css}" rel="stylesheet" />
         <link th:href="@{/css/dots.css}" rel="stylesheet" />
-        <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.png}">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
+        <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+        <script th:src="@{/js/jquery-ui.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/slick.min.js}"></script>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/slick.css}"/>
         <style>
             body {
                 font-family: 'Lato', sans-serif;
@@ -20,17 +19,17 @@
                 font-style: normal;
             }
         </style>
-        <!-- DEV ONLY -->
+        <!-- Dev -->
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body class="bg-gray-100 text-center" hx-boost="true">
+    <body class="bg-gray-100 text-center">
         <header class="fixed top-0 w-full z-20">
             <nav class="bg-white shadow-lg border-b border-gray-300">
                 <div class="container mx-auto flex md:justify-center py-4 md:py-10 px-10 md:px-32">
                     <div class="hidden md:flex space-x-12">
                         <ul class="flex space-x-12">
-                            <li><a th:href="'/change-locale/' + ${#locale.language == 'en' ? 'fr' : 'en'}" th:text="${#locale.language == 'en' ? 'FR' : 'EN'}" class="text-gray-600 hover:font-bold">EN</a></li>
+                            <li><a th:href="'/' + ${#locale.language == 'en' ? 'fr' : 'en'}" th:text="${#locale.language == 'en' ? 'FR' : 'EN'}" class="text-gray-600 hover:font-bold">EN</a></li>
                             <li><a href="#about" th:text="#{nav.about}" class="text-gray-600 hover:font-bold">About</a></li>
                             <li><a href="#portfolio" th:text="#{nav.portfolio}" class="text-gray-600 hover:font-bold">Portfolio</a></li>
                             <li><a href="#education" th:text="#{nav.education}" class="text-gray-600 hover:font-bold">Education</a></li>
@@ -39,14 +38,15 @@
                         </ul>
                     </div>
 
-                    <div class="md:hidden">
-                        <button id="mb-show" class="align-middle z-49">
+                    <div class="flex justify-between w-full md:hidden">
+                        <div class="align-middle z-49 ml-4"> <!-- added ml-4 to ensure some space -->
+                            <a th:href="'/' + ${#locale.language == 'en' ? 'fr' : 'en'}" th:text="${#locale.language == 'en' ? 'FR' : 'EN'}" class="block py-1 px-4 text-gray-600 hover:font-bold">EN</a>
+                        </div>
+                        <button id="mb-show" class="align-middle z-49 mr-4"> <!-- added mr-4 to ensure some space -->
                             <img th:src="@{/img/menu.png}" width="30" height="30"/>
                         </button>
-                        
                         <div id="mb-menu" class="absolute hidden w-screen top-0 left-0 z-50 shadow-lg border-b border-gray-300">
                             <ul>
-                                <li><a th:href="'/change-locale/' + ${#locale.language == 'en' ? 'fr' : 'en'}" th:text="${#locale.language == 'en' ? 'FR' : 'EN'}" class="block py-1 px-4 bg-white text-gray-600 hover:bg-gray-200 hover:font-bold">EN</a></li>
                                 <li><a href="#about" th:text="#{nav.about}" class="block py-1 px-4 bg-white text-gray-600 hover:bg-gray-200 hover:font-bold">About</a></li>
                                 <li><a href="#portfolio" th:text="#{nav.portfolio}" class="block py-1 px-4 bg-white text-gray-600 hover:bg-gray-200 hover:font-bold">Portfolio</a></li>
                                 <li><a href="#education" th:text="#{nav.education}" class="block py-1 px-4 bg-white text-gray-600 hover:bg-gray-200 hover:font-bold">Education</a></li>
@@ -60,6 +60,7 @@
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </nav>
         </header>
@@ -69,7 +70,7 @@
 
             <section id="about" class="justify-center bg-white rounded-lg shadow-lg mx-auto my-6 py-10 px-10 md:px-20 w-full md:w-3/4">
                 <h1 th:text="#{nav.about}" class="text-2xl">About</h1>
-                <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="grid grid-cols-2 text-center">
                     <div class="container md:text-right my-3 md:px-4">
                         <p th:text="#{about.who}" class="text-gray-500">Who</p>
                         <p>Nikola Tutić</p>
@@ -78,45 +79,49 @@
                     <div class="md:text-left my-3 md:px-4">
                         <p th:text="#{about.where}" class="text-gray-500">Where</p>
                         <p>Montréal (QC), Canada</p>
-                        <p>contact@tutic.ca</p>
+                        <a href = "mailto: contact@tutic.ca"  class="text-gray-600 underline hover:font-bold">contact@tutic.ca</a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 items-center">
+                    <div class="container my-3 md:px-4 flex flex-col items-center md:items-end">
+                        <p th:text="#{about.cv}" th:class="'text-gray-500' + ${#locale.language == 'en' ? ' pr-2' : ' pr-7'}">CV</p>
+                        <a th:href="#{about.cv_url}" target="_blank">
+                            <img th:src="@{img/pdf.png}" class="m-2 w-16 h-16">
+                        </a>
                     </div>
 
+                    <div class="container my-3 gap-0 flex flex-col items-center md:items-center">
+                        <p class="text-gray-500">Code</p>
+                        <a href="https://github.com/ntutic" target="_blank">
+                            <img th:src="@{img/github.png}" class="m-2 w-16 h-16">
+                        </a>
+                    </div>
+
+                    <div class="container my-3 md:px-4 flex flex-col items-center md:items-start">
+                        <p class="text-gray-500">Freelance</p>
+                        <a href="https://www.upwork.com/freelancers/~01d06d647eb569a541" target="_blank">
+                            <img th:src="@{img/upwork.png}" class="m-2 w-16 h-16">
+                        </a>
+                    </div>
                 </div>
-                <div class="my-3">
-                    <p th:text="#{about.what}" class="text-gray-500">What</p>
-                    <p  th:text="#{about.what_content}">What do I do</p>
-                    <!--
-                    <span>Launcher for</span>
-                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">agriculture machines</a>
-                    <span> and </span>
-                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">other scripts</a><br/>
-                    <span>Trigger processes on data from </span>
-                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">cables</a>
-                    <span> and </span>
-                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">APIs</a><br/>
-                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">Plugin for QGIS</a>
-                    <span> and </span>
-                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">various geospatial analyses</a><br/>
-                    <span>Collection, management and/or analyses on data from </span>
-                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">oceanic waves</a>,
-                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">remote sensing</a>,
-                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">e-commerce</a> and
-                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">MMA</a><br />
-                    -->
-                </div>
+
             </section>
 
-            <section id="portfolio" class="bg-white rounded-lg shadow-lg mx-auto my-6 py-10 px-5 md:px-20 w-full md:w-3/4">
+            <section id="portfolio" class="text-sm md:text-base bg-white rounded-lg shadow-lg mx-auto my-6 py-10 px-5 md:px-20 w-full md:w-3/4">
                 <h1 th:text="#{nav.portfolio}" class="text-2xl">Portfolio</h1>
-                <ol class="flex flex-wrap items-center justify-center">
-                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="Python">Python</button>
-                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="Java">Java</button>
-                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="GIS">GIS</button>
-                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="SQL">SQL</button>
-                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="VBA">VBA</button>
-                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="AWS">AWS</button>
-                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="GUI">GUI</button>
-                    <button class="filter-button m-2 px-4 py-1 bg-gray-100 rounded-full" data-tag="Web">Web</button>
+                <ol class="items-center justify-center flex flex-wrap -mx-2">
+                        <button class="filter-button m-2 px-4 py-1 bg-gray-300 rounded-full" data-tag="Python">Python</button>
+                        <button class="filter-button m-2 px-4 py-1 bg-gray-300 rounded-full" data-tag="JavaScript">JavaScript</button>
+                        <button class="filter-button m-2 px-4 py-1 bg-gray-300 rounded-full" data-tag="Java">Java</button>
+                        <button class="filter-button m-2 px-4 py-1 bg-gray-300 rounded-full" data-tag="SQL">SQL</button>
+                        <button class="filter-button m-2 px-4 py-1 bg-gray-300 rounded-full" data-tag="VBA">VBA</button>
+                </ol>
+                <ol class="items-center justify-center flex flex-wrap -mx-2">
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-300 rounded-full" data-tag="Desktop">Desktop</button>
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-300 rounded-full" data-tag="Web">Web</button>
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-300 rounded-full" data-tag="Plugin">Plugin</button>
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-300 rounded-full" data-tag="GIS">GIS</button>
+                    <button class="filter-button m-2 px-4 py-1 bg-gray-300 rounded-full" data-tag="Cloud">Cloud</button>
                 </ol>
 
                 <div class="container grid grid-cols-1 md:grid-cols-2">
@@ -124,7 +129,7 @@
                         <h2 th:text="${project.title}">Title</h2>
                         <div class="image-carousel">
                             <div th:each="alt, stat: ${project.alts}">
-                                <img class="h-full w-full object-cover z-0 relative p-4" th:src="${'/img/' + project.imageDir +'/' + (stat.index + 1) + '.png'}" loading="lazy">
+                                <img class="h-full w-full object-cover z-0 relative p-4" th:src="${'/img/' + project.imageDir +'/' + (stat.index + 1) + '.png'}" >
                                 <p class="text-center mt-2" th:text="${alt}">Subtitle</p>
                             </div>
                         </div>
@@ -144,6 +149,7 @@
                     <div class="container text-right pr-4">
                         <p th:text="${diploma.school}" class="text-gray-500">School</p>
                         <a th:text="${diploma.diploma}" th:href="${diploma.url}" class="underline hover:font-bold">Diploma</a>
+                        <p th:text="${diploma.extra}">Extra</p>
                     </div>
                     <div class="container text-left pl-4">
                         <p th:text="${diploma.period}" class="text-gray-500">Start - End</p>
@@ -166,8 +172,8 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <a th:text="${job.urlText}" th:href="${job.urlLink}" target="_blank" class="underline text-blue-600 font-bold hover:font-bold visited:text-purple-600">URL</a>
                         <p th:text="${job.description}">Description</p>
+                        <a th:text="${job.urlText}" th:href="${job.urlLink}" target="_blank" class="underline text-gray-600 font-bold hover:font-bold visited:text-purple-600">URL</a>
                     </div>
                 </div>
             </section>
@@ -176,16 +182,20 @@
                 <h1 th:text="#{nav.contact}" class="text-2xl">Contact</h1>
                 <form id="contact-form" th:action="@{/contact}" method="post" th:object="${message}">
                     <div class="grid grid-cols-2 my-1">
+                        <label th:text="#{contact.write}" class="my-1 text-right pr-4">Write</label>
+                        <a href = "mailto: contact@tutic.ca"  class="text-gray-600 underline hover:font-bold text-left my-1 ml-4 w-7/8 md:w-1/2">contact@tutic.ca</a>
+                    </div>
+                    <div class="grid grid-cols-2 my-1">
                         <label th:text="#{contact.name}" class="my-1 text-right pr-4">Name</label>
                         <input type="text" th:field="*{name}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-7/8 md:w-1/2"/>
                     </div>
                     <div class="grid grid-cols-2 my-1">
                         <label th:text="#{contact.mail}" class="my-1 text-right pr-4">E-mail</label>
-                        <input type="text" th:field="*{email}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-7/8 md:w-1/2"/>
+                        <input type="email" th:field="*{email}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-7/8 md:w-1/2"/>
                     </div>
                     <div class="grid grid-cols-2 my-1">
                         <label th:text="#{contact.phone}" class="my-1 text-right pr-4">Phone</label>
-                        <input type="text" th:field="*{phone}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-7/8 md:w-1/2"/>
+                        <input type="tel" th:field="*{phone}" class="shadow-lg border border-gray-300 rounded my-1 ml-4 pl-2 w-7/8 md:w-1/2"/>
                     </div>
                     <div class="grid grid-cols-2 my-1">
                         <label th:text="#{contact.content}" class="my-1 text-right pr-4">Message</label>
@@ -250,11 +260,11 @@
                 if (activeTags.has(tag)) {
                     activeTags.delete(tag);
                     $(this).removeClass('active');
-                    $(this).removeClass('bg-gray-300').addClass('bg-gray-100');
+                    $(this).removeClass('bg-gray-500').addClass('bg-gray-300');
                 } else {
                     activeTags.add(tag);
                     $(this).addClass('active');
-                    $(this).removeClass('bg-gray-100').addClass('bg-gray-300');
+                    $(this).removeClass('bg-gray-300').addClass('bg-gray-500');
                 }
                 $('.project').each(function() {
                     const card = $(this);
@@ -271,10 +281,7 @@
                     }
                 });
             });
-        });
 
-        // Handle form submission no-reload
-        $(document).ready(function() {
             $('#contact-form').on('submit', function(e) {
                 e.preventDefault();
                 let $submitButton = $('#contact-submit');

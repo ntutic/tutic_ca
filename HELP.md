@@ -1,3 +1,36 @@
+
+
+
+
+# How to
+
+Compile w/ GraalVM with :
+
+```
+$ ./mvnw spring-boot:build-image -Pnative
+```
+
+Or in Idea's run anything with :
+
+```
+mvn -Pnative spring-boot:build-image
+```
+
+Push/pull container :
+
+```
+docker tag site:0.0.1-SNAPSHOT nikolatutic/site:0.0.1-SNAPSHOT
+docker push nikolatutic/site:0.0.1-SNAPSHOT
+docker pull nikolatutic/site:0.0.1-SNAPSHOT
+```
+
+Run :
+```
+docker run -d --name tutic_ca --restart=always -p 8080:8080 nikolatutic/site:0.0.1-SNAPSHOT
+```
+
+---
+
 # Getting Started
 
 ### Reference Documentation
@@ -43,21 +76,6 @@ To create the image, run the following goal:
 $ ./mvnw spring-boot:build-image -Pnative
 ```
 
-In Idea's run anything :
-
-```
-mvn -Pnative spring-boot:build-image
-```
-
-Then, you can run the app like any other container:
-
-```
-$ docker tag site:0.0.1-SNAPSHOT nikolatutic/site:0.0.1-SNAPSHOT
-$ docker run -d --restart=always -p 8080:8080 nikolatutic/site:0.0.1-SNAPSHOT
-
-
-```
-
 ### Executable with Native Build Tools
 
 Use this option if you want to explore more options such as running your tests in a native image.
@@ -69,12 +87,6 @@ To create the executable, run the following goal:
 
 ```
 $ ./mvnw native:compile -Pnative
-```
-
-Then, you can run the app as follows:
-
-```
-$ target/vaaltest2
 ```
 
 You can also run your existing tests suite in a native image.
