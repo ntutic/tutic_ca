@@ -3,14 +3,17 @@
     "title": "Extension Chrome pour simplifier Clockify",
     "imageDir": "clockify",
     "alts": [
-      "Permet de générer une semaine de temps en un clic",
-      "Utilisé dans une compagnie de >50 employés pour saisie",
+      "Permet de générer une semaine de travail en un clic",
+      "Utilisée par >60 employés pour la saisie de temps",
       "Sans initialisation manuelle pour l'utilisateur"
     ],
     "tools": [
       "JavaScript",
-      "Plugin"
-    ]
+      "Plugin",
+      "Web"
+    ],
+    "link": "https://chromewebstore.google.com/detail/weekly-clockify/oejclklollnadllgjcpaopapmckpeaim",
+    "icon": "chrome.png"
   },
   {
     "title": "GUIs et contrôleurs pour équipement de fermes",
@@ -38,6 +41,20 @@
       "Cloud",
       "Desktop",
       "GIS"
+    ]
+  },
+  {
+    "title": "Extension Chrome intégrant des données externes",
+    "imageDir": "crm",
+    "alts": [
+      "Ajout des données externes à une page web",
+      "Communication bidirectionelle avec la base de données"
+    ],
+    "tools": [
+      "JavaScript",
+      "Plugin",
+      "Web",
+      "SQL"
     ]
   },
   {
@@ -96,7 +113,8 @@
       "Spring",
       "Web"
     ],
-    "github": "https://github.com/ntutic/tutic_ca"
+    "link": "https://github.com/ntutic/tutic_ca",
+    "icon": "github.png"
   },
   {
     "title": "Divers",
@@ -112,6 +130,7 @@
       "Web",
       "GIS"
     ],
-    "github": "https://github.com/ntutic"
+    "link": "https://github.com/ntutic",
+    "icon": "github.png"
   }
 ]

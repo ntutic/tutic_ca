@@ -136,8 +136,8 @@
                         <ol class="flex flex-wrap items-center justify-center">
                             <li th:each="tool: ${project.tools}" th:attr="data-tag=${tool}" th:text="${tool}" class="m-2 px-4 py-1 bg-gray-300 rounded-full">Tool</li>
                         </ol>
-                        <a th:if="${!#strings.isEmpty(project.github)}" th:href="${project.github}" target="_blank" class="flex items-center justify-center">
-                            <img th:src="@{img/github.png}" class="m-2 w-16 h-16">
+                        <a th:if="${!#strings.isEmpty(project.link)}" th:href="${project.link}" target="_blank" class="flex items-center justify-center">
+                            <img th:src="${'img/' + project.icon}" class="m-2 w-16 h-16">
                         </a>
                     </div>
                 </div>

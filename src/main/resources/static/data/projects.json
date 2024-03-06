@@ -9,8 +9,11 @@
     ],
     "tools": [
       "JavaScript",
-      "Plugin"
-    ]
+      "Plugin",
+      "Web"
+    ],
+    "link": "https://chromewebstore.google.com/detail/weekly-clockify/oejclklollnadllgjcpaopapmckpeaim",
+    "icon": "chrome.png"
   },
   {
     "title": "Control Panels for Farming Machines",
@@ -37,6 +40,20 @@
       "Python",
       "Cloud",
       "Desktop"
+    ]
+  },
+  {
+    "title": "Chrome Extension Integrating Data to CRM",
+    "imageDir": "crm",
+    "alts": [
+      "In-page display of external customer data",
+      "Both way communication with database"
+    ],
+    "tools": [
+      "JavaScript",
+      "Plugin",
+      "Web",
+      "SQL"
     ]
   },
   {
@@ -98,7 +115,8 @@
       "Spring",
       "Web"
     ],
-    "github": "https://github.com/ntutic/tutic_ca"
+    "link": "https://github.com/ntutic/tutic_ca",
+    "icon": "github.png"
   },
   {
     "title": "Miscelleaneous",
@@ -112,9 +130,9 @@
     "tools": [
       "Python",
       "Java",
-      "C",
       "Web"
     ],
-    "github": "https://github.com/ntutic"
+    "link": "https://github.com/ntutic",
+    "icon": "github.png"
   }
 ]

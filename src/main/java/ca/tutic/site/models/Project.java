@@ -10,7 +10,8 @@ public class Project {
     private String title;
     private String description;
     private String imageDir;
-    private String github;
+    private String link;
+    private String icon;
     private String upwork;
     private List<String> alts;
     private List<String> tools;
