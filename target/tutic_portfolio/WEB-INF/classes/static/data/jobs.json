@@ -1,0 +1,85 @@
+[
+  {
+    "employer": "UpWork",
+    "url": "https://www.upwork.com/",
+    "title": "Freelance developer",
+    "period": "2022 - Current",
+    "location": "Remote",
+    "description": "Applications, scripts, data scraping and processing",
+    "descriptionExtra": "",
+    "urlText": "View my profile",
+    "urlLink": "https://www.upwork.com/freelancers/~01d06d647eb569a541"
+  },
+  {
+    "employer": "Oneka Technologies",
+    "url": "https://www.onekawater.com/",
+    "title": "Contractual technician",
+    "period": "2021 - Current",
+    "location": "Shebrooke (QC), Canada",
+    "description": "Scripting, construction, benchmark testing"
+  },
+  {
+    "employer": "Vaudreuil-Soulanges Watershed Organization",
+    "url": "https://cobaver-vs.org",
+    "title": "Project Manager",
+    "period": "2019 - 2020",
+    "location": "Saint-Polycarpe (QC), Canada",
+    "description": "GIS, stakeholder outreach, grant seeking"
+  },
+  {
+    "employer": "South Gaspésie Watershed Organization",
+    "title": "Project Manager",
+    "url": "https://eaugaspesiesud.org/",
+    "period": "2018 - 2019",
+    "location": "Bonaventure (QC), Canada",
+    "description": "Citizen outreach, grant seeking, monitoring"
+  },
+  {
+    "employer": "Sykes Enterprises",
+    "url": "https://en.wikipedia.org/wiki/Sykes_Enterprises",
+    "title": "Technical Support",
+    "period": "2017 - 2018",
+    "location": "Sherbrooke (QC), Canada",
+    "description": "Customer support, replacement supervisor"
+  },
+  {
+    "employer": "Écollab (now Agropol)",
+    "url": "https://www.agropol.ca/",
+    "title": "Agro-entrepreneur",
+    "period": "2016 - 2017",
+    "location": "Sherbrooke (QC), Canada",
+    "description": "Production, sales"
+  },
+  {
+    "employer": "Université de Sherbrooke",
+    "url": "http://www.billshipley.recherche.usherbrooke.ca/",
+    "title": "Research Assistant",
+    "period": "2015 - 2016",
+    "location": "Sherbrooke (QC), Canada",
+    "description": "Botany, sampling, taxonomy"
+  },
+  {
+    "employer": "Environment Ministry of Quebec",
+    "url": "https://www.environnement.gouv.qc.ca/",
+    "title": "Analyst",
+    "period": "2015",
+    "location": "Rimouski (QC), Canada",
+    "description": "Environmental permitting"
+  },
+  {
+    "employer": "UMR EcoFoG",
+    "url": "https://www.ecofog.gf/",
+    "title": "Research Assistant",
+    "period": "2015",
+    "location": "Kourou (French Guiana), France",
+    "description": "Entomology, sampling, taxonomy"
+  },
+  {
+    "employer": "University of Hawaii",
+    "url": "https://www.soest.hawaii.edu/soestwp/tech/facilities/hawaii-tree-snail-conservation-laboratory/",
+    "title": "Research Assistant",
+    "period": "2014",
+    "location": "Honolulu (HI), USA",
+    "description": "Conservation, population genetics"
+  }
+]

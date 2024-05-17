@@ -1,0 +1,138 @@
+[
+  {
+    "title": "Chrome Extension to Enhance Timesheet App",
+    "imageDir": "clockify",
+    "alts": [
+      "Extend Clockify's timesheet for bulk weekly time entries",
+      "Used in a company of >50 people to simplify time management",
+      "No manual setup required for API data connection"
+    ],
+    "tools": [
+      "JavaScript",
+      "Plugin",
+      "Web"
+    ],
+    "link": "https://chromewebstore.google.com/detail/weekly-clockify/oejclklollnadllgjcpaopapmckpeaim",
+    "icon": "chrome.png"
+  },
+  {
+    "title": "Control Panels for Farming Machines",
+    "imageDir": "panels",
+    "alts": [
+      "Two-way communication with devices (ex. mixers, feeders)",
+      "Configurable interface, labels and connection settings",
+      "Shipped as a native Windows application",
+      "Mockable data and connections for development"
+    ],
+    "tools": [
+      "Python",
+      "Desktop"
+    ]
+  },
+  {
+    "title": "Data Collection and Management",
+    "imageDir": "scraping",
+    "alts": [
+      "Gather, clean and present data from the web (ex. geospatial, e-commerce, sports)",
+      "Sync data and new scripts with client machines"
+    ],
+    "tools": [
+      "Python",
+      "Cloud",
+      "Desktop"
+    ]
+  },
+  {
+    "title": "Chrome Extension Integrating Data to CRM",
+    "imageDir": "crm",
+    "alts": [
+      "In-page display of external customer data",
+      "Both way communication with database"
+    ],
+    "tools": [
+      "JavaScript",
+      "Plugin",
+      "Web",
+      "SQL"
+    ]
+  },
+  {
+    "title": "Script Launcher",
+    "imageDir": "scraper_gui",
+    "alts": [
+      "Comes with per-script configs",
+      "Handle output pipelines",
+      "Control scraper behavior"
+    ],
+    "tools": [
+      "Python",
+      "Desktop",
+      "Cloud",
+      "SQL"
+    ]
+  },
+
+  {
+    "title": "Modbus Data Stream Monitoring",
+    "description": "Process for monitoring a Modbus data stream and trigger actions on certain ",
+    "imageDir": "monitor_relay",
+    "alts": [
+      "Monitor data stream and act on it",
+      "Dynamic system tray as indicator",
+      "Configurable processes and logging"
+    ],
+    "tools": [
+      "Python",
+      "Desktop"
+    ]
+  },
+  {
+    "title": "MS Access Integrated Manager and Launcher",
+    "description": "Integrated database management interface and script launcher directly in Microsoft Access ",
+    "imageDir": "access_gui",
+    "alts": [
+      "Configurable launcher for data scraping",
+      "Consultation and data editing",
+      "Syncing between Access and the RDS database"
+    ],
+    "tools": [
+      "VBA",
+      "Cloud",
+      "SQL",
+      "Desktop"
+    ]
+  },
+  {
+    "title": "Personal Website",
+    "description": "Simple personal website",
+    "imageDir": "portfolio_site",
+    "alts": [
+      "The website you are currently browsing",
+      "Native GraalVM docker image hosted on EC2 instance"
+    ],
+    "tools": [
+      "Java",
+      "Spring",
+      "Web"
+    ],
+    "link": "https://github.com/ntutic/tutic_ca",
+    "icon": "github.png"
+  },
+  {
+    "title": "Miscelleaneous",
+    "imageDir": "misc",
+    "alts": [
+      "CLI, utility or systems scripts",
+      "Courses, books and exploration"
+
+
+    ],
+    "tools": [
+      "Python",
+      "Java",
+      "Web"
+    ],
+    "link": "https://github.com/ntutic",
+    "icon": "github.png"
+  }
+]

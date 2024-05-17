@@ -1,0 +1,17 @@
+nav.about=Ã propos
+nav.portfolio=Portfolio
+nav.education=Scholarité
+nav.work=Expériences
+nav.contact=Contactez-moi
+about.who=Qui
+about.who_content=Biologiste tourné développeur
+about.where=Où
+contact.write=À
+contact.name=Nom
+contact.mail=Courriel
+contact.phone=Téléphone
+contact.content=Message
+contact.button=Envoyer
+contact.sending=En cours d'envoi...
+about.cv=CV
+about.cv_url=pdf/Nikola%20Tutic%20-%20CV.pdf

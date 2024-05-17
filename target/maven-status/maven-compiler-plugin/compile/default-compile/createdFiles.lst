@@ -1,0 +1,15 @@
+ca/tutic/site/services/StaticService$2.class
+ca/tutic/site/ServletInitializer.class
+ca/tutic/site/configs/SecretsConfig.class
+ca/tutic/site/SiteController.class
+ca/tutic/site/SiteApplication.class
+ca/tutic/site/configs/LocaleConfig.class
+ca/tutic/site/services/StaticService$3.class
+ca/tutic/site/services/EmailService.class
+ca/tutic/site/models/Diploma.class
+ca/tutic/site/models/Message.class
+ca/tutic/site/models/Project.class
+ca/tutic/site/configs/JacksonConfig.class
+ca/tutic/site/models/Job.class
+ca/tutic/site/services/StaticService.class
+ca/tutic/site/services/StaticService$1.class

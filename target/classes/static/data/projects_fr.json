@@ -1,0 +1,136 @@
+[
+  {
+    "title": "Extension Chrome pour simplifier Clockify",
+    "imageDir": "clockify",
+    "alts": [
+      "Permet de générer une semaine de travail en un clic",
+      "Utilisée par >60 employés pour la saisie de temps",
+      "Sans initialisation manuelle pour l'utilisateur"
+    ],
+    "tools": [
+      "JavaScript",
+      "Plugin",
+      "Web"
+    ],
+    "link": "https://chromewebstore.google.com/detail/weekly-clockify/oejclklollnadllgjcpaopapmckpeaim",
+    "icon": "chrome.png"
+  },
+  {
+    "title": "GUIs et contrôleurs pour équipement de fermes",
+    "imageDir": "panels",
+    "alts": [
+      "Communication bi-directionelle avec l'équipement",
+      "Interface entièrement configurable",
+      "Livré en application Windows native",
+      "Données et connections faussables pour développement"
+    ],
+    "tools": [
+      "Python",
+      "Desktop"
+    ]
+  },
+  {
+    "title": "Acquisition et gestion de données",
+    "imageDir": "scraping",
+    "alts": [
+      "Collecter, préparer et présenter des données du web",
+      "Synchronisation des données et nouveaux scripts sur les machines clientes"
+    ],
+    "tools": [
+      "Python",
+      "Cloud",
+      "Desktop",
+      "GIS"
+    ]
+  },
+  {
+    "title": "Extension Chrome intégrant des données externes",
+    "imageDir": "crm",
+    "alts": [
+      "Ajout des données externes à une page web",
+      "Communication bidirectionelle avec la base de données"
+    ],
+    "tools": [
+      "JavaScript",
+      "Plugin",
+      "Web",
+      "SQL"
+    ]
+  },
+  {
+    "title": "Lanceurs de scripts",
+    "imageDir": "scraper_gui",
+    "alts": [
+      "Configuration sauvegardée par script",
+      "Différentes sorties de données",
+      "Contrôle du comportement du programme"
+    ],
+    "tools": [
+      "Python",
+      "Desktop",
+      "Cloud",
+      "SQL"
+    ]
+  },
+
+  {
+    "title": "Sniffing d'un flux de données",
+    "imageDir": "monitor_relay",
+    "alts": [
+      "Écoute du flux Modbus pour déclencher processus",
+      "Indicateur de status",
+      "Procédés et archivage configurables"
+    ],
+    "tools": [
+      "Python",
+      "Desktop"
+    ]
+  },
+  {
+    "title": "Lanceur intégré à MS Access",
+    "imageDir": "access_gui",
+    "alts": [
+      "Lanceur de scripts configurable",
+      "Consultation et modification tabulaire des données",
+      "Synchronisation avec base de données RDS"
+    ],
+    "tools": [
+      "VBA",
+      "Cloud",
+      "SQL",
+      "Desktop"
+    ]
+  },
+  {
+    "title": "Page personnel",
+    "imageDir": "portfolio_site",
+    "alts": [
+      "La page web que vous visionnez",
+      "Image GraalVM tournant sur petite instance EC2"
+    ],
+    "tools": [
+      "Java",
+      "Spring",
+      "Web"
+    ],
+    "link": "https://github.com/ntutic/tutic_ca",
+    "icon": "github.png"
+  },
+  {
+    "title": "Divers",
+    "imageDir": "misc",
+    "alts": [
+      "Terminal, scripts utiliataires ou systèmes",
+      "Cours, livres et exploration"
+    ],
+    "tools": [
+      "Python",
+      "JavaScript",
+      "Java",
+      "Web",
+      "GIS"
+    ],
+    "link": "https://github.com/ntutic",
+    "icon": "github.png"
+  }
+]

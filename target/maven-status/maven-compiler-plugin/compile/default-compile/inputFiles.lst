@@ -1,0 +1,12 @@
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/SiteController.java
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/services/EmailService.java
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/models/Diploma.java
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/configs/LocaleConfig.java
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/services/StaticService.java
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/SiteApplication.java
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/ServletInitializer.java
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/configs/SecretsConfig.java
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/configs/JacksonConfig.java
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/models/Job.java
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/models/Project.java
+/home/nikola/code/tutic_ca/src/main/java/ca/tutic/site/models/Message.java
