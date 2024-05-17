@@ -12,10 +12,3 @@ public class SiteApplication {
 
 }
 
-
-// WHy is my application not rendering css?
-
-// https://stackoverflow.com/questions/39192777/why-is-my-application-not-rendering-css
-//	You need to add the following to your application.properties file:
-//
-//		spring.mvc.view.prefix=/WEB-INF/jsp/

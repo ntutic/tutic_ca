@@ -1,4 +1,55 @@
+https://docs.docker.com/engine/install/debian/
+sudo apt update
+sudo apt upgrade
+sudo apt-get install ca-certificates curl gnupg
 
+
+
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+$(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+# Install dependencies
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo docker hello-world
+
+# Permissions
+sudo usermod -aG docker $USER
+sudo reboot
+
+
+
+# Nginx
+sudo apt install nginx
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo vim /etc/nginx/sites-available/tutic_ca
+sudo ln -s /etc/nginx/sites-available/tutic_ca /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl restart nginx
+
+# Certbot
+https://certbot.eff.org/instructions?ws=nginx&os=debiantesting
+sudo apt install snapd
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo certbot --nginx -d tutic.ca -d www.tutic.ca
+sudo certbot renew --dry-run
+
+
+### EC2 config
+
+Instantiate Debian EC2 with HTTP and HTTPS traffic allowed
 
 
 

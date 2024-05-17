@@ -29,7 +29,7 @@
                 <div class="container mx-auto flex md:justify-center py-4 md:py-10 px-10 md:px-32">
                     <div class="hidden md:flex space-x-12">
                         <ul class="flex space-x-12">
-                            <li><a th:href="'/' + ${#locale.language == 'en' ? 'fr' : 'en'}" th:text="${#locale.language == 'en' ? 'FR' : 'EN'}" class="text-gray-600 hover:font-bold">EN</a></li>
+                            <li><a th:href="@{'/' + ${#locale.language == 'en' ? 'fr' : 'en'}}" th:text="${#locale.language == 'en' ? 'FR' : 'EN'}" class="text-gray-600 hover:font-bold">EN</a></li>
                             <li><a href="#about" th:text="#{nav.about}" class="text-gray-600 hover:font-bold">About</a></li>
                             <li><a href="#portfolio" th:text="#{nav.portfolio}" class="text-gray-600 hover:font-bold">Portfolio</a></li>
                             <li><a href="#education" th:text="#{nav.education}" class="text-gray-600 hover:font-bold">Education</a></li>
@@ -86,21 +86,21 @@
                     <div class="container my-3 md:px-4 flex flex-col items-center md:items-end">
                         <p th:text="#{about.cv}" th:class="'text-gray-500' + ${#locale.language == 'en' ? ' pr-2' : ' pr-7'}">CV</p>
                         <a th:href="#{about.cv_url}" target="_blank">
-                            <img th:src="@{img/pdf.png}" class="m-2 w-16 h-16">
+                            <img th:src="@{/img/pdf.png}" class="m-2 w-16 h-16">
                         </a>
                     </div>
 
                     <div class="container my-3 gap-0 flex flex-col items-center md:items-center">
                         <p class="text-gray-500">Code</p>
                         <a href="https://github.com/ntutic" target="_blank">
-                            <img th:src="@{img/github.png}" class="m-2 w-16 h-16">
+                            <img th:src="@{/img/github.png}" class="m-2 w-16 h-16">
                         </a>
                     </div>
 
                     <div class="container my-3 md:px-4 flex flex-col items-center md:items-start">
                         <p class="text-gray-500">Freelance</p>
                         <a href="https://www.upwork.com/freelancers/~01d06d647eb569a541" target="_blank">
-                            <img th:src="@{img/upwork.png}" class="m-2 w-16 h-16">
+                            <img th:src="@{/img/upwork.png}" class="m-2 w-16 h-16">
                         </a>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                         <h2 th:text="${project.title}">Title</h2>
                         <div class="image-carousel">
                             <div th:each="alt, stat: ${project.alts}">
-                                <img class="h-full w-full object-cover z-0 relative p-4" th:src="${'/img/' + project.imageDir +'/' + (stat.index + 1) + '.png'}" >
+                                <img class="h-full w-full object-cover z-0 relative p-4" th:src="@{'/img/' + ${project.imageDir} + '/' + ${stat.index + 1} + '.png'}" >
                                 <p class="text-center mt-2" th:text="${alt}">Subtitle</p>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                             <li th:each="tool: ${project.tools}" th:attr="data-tag=${tool}" th:text="${tool}" class="m-2 px-4 py-1 bg-gray-300 rounded-full">Tool</li>
                         </ol>
                         <a th:if="${!#strings.isEmpty(project.link)}" th:href="${project.link}" target="_blank" class="flex items-center justify-center">
-                            <img th:src="${'img/' + project.icon}" class="m-2 w-16 h-16">
+                            <img th:src="@{'/img/' + ${project.icon}}" class="m-2 w-16 h-16">
                         </a>
                     </div>
                 </div>
