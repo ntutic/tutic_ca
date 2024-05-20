@@ -291,7 +291,7 @@
                 $submitButton.text($submitButton.attr("alt"));
                 $submitButton.prop('disabled', true);
                 $.ajax({
-                    url: $(this).attr('action'),
+                    url: $(this).attr('action').replace("/tutic_portfolio", ""),
                     type: 'POST',
                     data: $(this).serialize(),
                     success: function(response) {
