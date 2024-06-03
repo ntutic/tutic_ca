@@ -70,14 +70,14 @@ mvn -Pnative spring-boot:build-image
 Push/pull container :
 
 ```
-docker tag site:0.0.1-SNAPSHOT nikolatutic/site:0.0.1-SNAPSHOT
-docker push nikolatutic/site:0.0.1-SNAPSHOT
-docker pull nikolatutic/site:0.0.1-SNAPSHOT
+docker tag tutic_portfolio:0.0.1-SNAPSHOT nikolatutic/tutic_portfolio:0.0.1-SNAPSHOT
+docker push nikolatutic/tutic_portfolio:0.0.1-SNAPSHOT
+docker pull nikolatutic/tutic_portfolio:0.0.1-SNAPSHOT
 ```
 
 Run :
 ```
-docker run -d --name tutic_ca --restart=always -p 8080:8080 nikolatutic/site:0.0.1-SNAPSHOT
+docker run -d --name tutic_portfolio --restart=always -p 9001:8080 nikolatutic/tutic_portfolio:0.0.1-SNAPSHOT
 ```
 
 ---
