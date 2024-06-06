@@ -1,7 +1,7 @@
 [
   {
     "title": "Extension Chrome pour simplifier Clockify",
-    "imageDir": "clockify",
+    "name": "clockify",
     "alts": [
       "Permet de générer une semaine de travail en un clic",
       "Utilisée par >60 employés pour la saisie de temps",
@@ -17,7 +17,7 @@
   },
   {
     "title": "GUIs et contrôleurs pour équipement de fermes",
-    "imageDir": "panels",
+    "name": "panels",
     "alts": [
       "Communication bi-directionelle avec l'équipement",
       "Interface entièrement configurable",
@@ -31,7 +31,7 @@
   },
   {
     "title": "Acquisition et gestion de données",
-    "imageDir": "scraping",
+    "name": "scraping",
     "alts": [
       "Collecter, préparer et présenter des données du web",
       "Synchronisation des données et nouveaux scripts sur les machines clientes"
@@ -45,7 +45,7 @@
   },
   {
     "title": "Extension Chrome intégrant des données externes",
-    "imageDir": "crm",
+    "name": "crm",
     "alts": [
       "Ajout des données externes à une page web",
       "Communication bidirectionelle avec la base de données"
@@ -59,7 +59,7 @@
   },
   {
     "title": "Lanceurs de scripts",
-    "imageDir": "scraper_gui",
+    "name": "scraper_gui",
     "alts": [
       "Configuration sauvegardée par script",
       "Différentes sorties de données",
@@ -75,7 +75,7 @@
 
   {
     "title": "Sniffing d'un flux de données",
-    "imageDir": "monitor_relay",
+    "name": "monitor_relay",
     "alts": [
       "Écoute du flux Modbus pour déclencher processus",
       "Indicateur de status",
@@ -88,7 +88,7 @@
   },
   {
     "title": "Lanceur intégré à MS Access",
-    "imageDir": "access_gui",
+    "name": "access_gui",
     "alts": [
       "Lanceur de scripts configurable",
       "Consultation et modification tabulaire des données",
@@ -103,7 +103,7 @@
   },
   {
     "title": "Page personnel",
-    "imageDir": "portfolio_site",
+    "name": "portfolio_site",
     "alts": [
       "La page web que vous visionnez",
       "Image GraalVM tournant sur petite instance EC2"
@@ -118,7 +118,7 @@
   },
   {
     "title": "Divers",
-    "imageDir": "misc",
+    "name": "misc",
     "alts": [
       "Terminal, scripts utiliataires ou systèmes",
       "Cours, livres et exploration"

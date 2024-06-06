@@ -12,6 +12,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.support.RequestContextUtils;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 import java.io.IOException;
@@ -30,12 +31,19 @@ public class SiteController {
     }
 
     @GetMapping("/")
-    public String getHome(Model model) throws IOException {
+    public String getHome(@ModelAttribute("highlight") String highlight, Model model) throws IOException {
         model.addAttribute("projects", staticService.getProjects());
         model.addAttribute("diplomas", staticService.getDiplomas());
         model.addAttribute("jobs", staticService.getJobs());
         model.addAttribute("message", new Message());
+        model.addAttribute("highlight", highlight);
         return "index";
+    }
+
+    @PostMapping("/highlight")
+    public String getHighlight(@RequestParam("name") String name, RedirectAttributes redirectAttributes) throws IOException {
+        redirectAttributes.addFlashAttribute("highlight", name);
+        return "redirect:/";
     }
 
     @PostMapping("/contact")
@@ -60,4 +68,5 @@ public class SiteController {
     public String toUpwork(){
         return "redirect:https://www.upwork.com/freelancers/~01d06d647eb569a541";
     }
+
 }

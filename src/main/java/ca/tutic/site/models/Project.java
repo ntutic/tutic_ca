@@ -9,7 +9,7 @@ public class Project {
     public Project() {}
     private String title;
     private String description;
-    private String imageDir;
+    private String name;
     private String link;
     private String icon;
     private String upwork;

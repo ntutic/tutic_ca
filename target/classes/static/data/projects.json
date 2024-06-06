@@ -1,7 +1,7 @@
 [
   {
     "title": "Chrome Extension to Enhance Timesheet App",
-    "imageDir": "clockify",
+    "name": "clockify",
     "alts": [
       "Extend Clockify's timesheet for bulk weekly time entries",
       "Used in a company of >50 people to simplify time management",
@@ -17,7 +17,7 @@
   },
   {
     "title": "Control Panels for Farming Machines",
-    "imageDir": "panels",
+    "name": "panels",
     "alts": [
       "Two-way communication with devices (ex. mixers, feeders)",
       "Configurable interface, labels and connection settings",
@@ -27,11 +27,23 @@
     "tools": [
       "Python",
       "Desktop"
+    ],
+    "reviews": [
+      {
+        "text": "Nikola has been an exceptional asset to our software development project, consistently exceeding expectations with his efficiency and expertise. Not only did he deliver the project ahead of schedule, but he also provided additional value beyond our initial requirements, demonstrating a keen understanding of our needs and the technical skill to enhance our project's outcomes. For those in search of a reliable and skilled software developer, Nikola comes highly recommended. His ability to deliver high-quality work within tight timelines is a rare find. Engaging him for your software development needs is a decision you're unlikely to regret. His professional demeanor and results-oriented approach make him an ideal choice for any project.",
+        "dates": "Jan 30, 2024 - Feb 21, 2024",
+        "title": "Software developer needed"
+      },
+      {
+        "text": "Nikola did an excellent job developing software for our project. He delivered everything as expected, showcasing his reliability and proficiency in his field. Throughout the process, Nikola's communication was clear and timely, making him a standout choice for anyone in need of a skilled freelancer. If you're considering hiring Nikola for your software needs, we highly recommend him. You won't be disappointed with the quality of his work and his professional approach.",
+        "dates": "Mar 14, 2024 - Jun 3, 2024",
+        "title": "Merge Photo Software Phase 2"
+      }
     ]
   },
   {
     "title": "Data Collection and Management",
-    "imageDir": "scraping",
+    "name": "scraping",
     "alts": [
       "Gather, clean and present data from the web (ex. geospatial, e-commerce, sports)",
       "Sync data and new scripts with client machines"
@@ -44,7 +56,7 @@
   },
   {
     "title": "Chrome Extension Integrating Data to CRM",
-    "imageDir": "crm",
+    "name": "crm",
     "alts": [
       "In-page display of external customer data",
       "Both way communication with database"
@@ -58,7 +70,7 @@
   },
   {
     "title": "Script Launcher",
-    "imageDir": "scraper_gui",
+    "name": "scraper_gui",
     "alts": [
       "Comes with per-script configs",
       "Handle output pipelines",
@@ -75,7 +87,7 @@
   {
     "title": "Modbus Data Stream Monitoring",
     "description": "Process for monitoring a Modbus data stream and trigger actions on certain ",
-    "imageDir": "monitor_relay",
+    "name": "monitor_relay",
     "alts": [
       "Monitor data stream and act on it",
       "Dynamic system tray as indicator",
@@ -89,7 +101,7 @@
   {
     "title": "MS Access Integrated Manager and Launcher",
     "description": "Integrated database management interface and script launcher directly in Microsoft Access ",
-    "imageDir": "access_gui",
+    "name": "access_gui",
     "alts": [
       "Configurable launcher for data scraping",
       "Consultation and data editing",
@@ -105,7 +117,7 @@
   {
     "title": "Personal Website",
     "description": "Simple personal website",
-    "imageDir": "portfolio_site",
+    "name": "portfolio_site",
     "alts": [
       "The website you are currently browsing",
       "Native GraalVM docker image hosted on EC2 instance"
@@ -120,7 +132,7 @@
   },
   {
     "title": "Miscelleaneous",
-    "imageDir": "misc",
+    "name": "misc",
     "alts": [
       "CLI, utility or systems scripts",
       "Courses, books and exploration"

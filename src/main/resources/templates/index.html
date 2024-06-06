@@ -126,10 +126,11 @@
 
                 <div class="container grid grid-cols-1 md:grid-cols-2">
                     <div class="project shadow-lg border border-gray-300 rounded relative m-1 md:m-3" th:each="project: ${projects}">
+                        <a th:href="@{'/highlight?name=' + ${project.name}}"
                         <h2 th:text="${project.title}">Title</h2>
                         <div class="image-carousel">
                             <div th:each="alt, stat: ${project.alts}">
-                                <img class="h-full w-full object-cover z-0 relative p-4" th:src="@{'/img/' + ${project.imageDir} + '/' + ${stat.index + 1} + '.png'}" >
+                                <img class="h-full w-full object-cover z-0 relative p-4" th:src="@{'/img/' + ${project.name} + '/' + ${stat.index + 1} + '.png'}" >
                                 <p class="text-center mt-2" th:text="${alt}">Subtitle</p>
                             </div>
                         </div>
@@ -208,17 +209,95 @@
                 </form>
             </section>
         </div>
+
+        <div th:each="project: ${projects}" th:if="${highlight == project.name}"  id="project-modal" class="fixed inset-0 z-50 overflow-auto bg-smoke-light flex">
+            <div class="relative p-8 bg-white w-full max-w-3xl m-auto flex-col flex rounded-lg shadow-lg">
+                <!-- Close Button -->
+                <button class="absolute top-0 right-0 mt-4 mr-4 text-gray-500 hover:text-gray-700" id="modal-close-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <!-- Project Title -->
+                <h2 th:text="${project.title}" class="text-2xl font-bold mb-4">Project Title</h2>
+
+                <div class="grid grid-cols-2">
+                    <div class="w-full">
+                        <!-- Image Carousel -->
+                        <div class="image-carousel">
+                            <div th:each="alt, stat: ${project.alts}">
+                                <img class="h-full w-full object-cover z-0 relative p-4" th:src="@{'/img/' + ${project.name} + '/' + ${stat.index + 1} + '.png'}">
+                                <p class="text-center mt-2" th:text="${alt}">Subtitle</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Tools -->
+                        <div class="flex flex-wrap justify-center my-4">
+                            <span th:each="tool: ${project.tools}" th:text="${tool}" class="m-2 px-4 py-1 bg-gray-300 rounded-full">Tool</span>
+                        </div>
+
+                        <!-- Project Description -->
+                        <p th:text="${project.description}" class="text-gray-600 mb-4">Project Description</p>
+
+                        <!-- Project Link -->
+                        <div th:if="${!#strings.isEmpty(project.link)}" class="text-center">
+                            <a th:href="${project.link}" target="_blank" class="text-blue-600 underline hover:font-bold">
+                                <img th:src="@{'/img/' + ${project.icon}}" class="m-2 w-16 h-16 inline">
+                                <span th:text="#{project.view_more}">View More</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="w-full">
+                        <div th:if="${project.reviews != null}" th:each="review: ${project.reviews}">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 
     <script>
+
+
         $(document).ready(function() {
-            // Image carousels
-            $('.image-carousel').slick({
-                dots: true,
-                arrows: true,
-                prevArrow: '<button class="slick-prev flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 left-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10 ml-4" aria-label="Previous" type="button"><</button>',
-                nextArrow: '<button class="slick-next flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 right-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10 mr-4" aria-label="Next" type="button">></button>',
-            })
+            function initializeSlickCarousel() {
+                console.log("initializing")
+                $('.image-carousel:not(.slick-initialized)').slick({
+                    dots: true,
+                    arrows: true,
+                    prevArrow: '<button class="slick-prev flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 left-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10 ml-4" aria-label="Previous" type="button"><</button>',
+                    nextArrow: '<button class="slick-next flex items-center justify-center w-8 h-8 font-bold text-2xl absolute top-1/2 transform -translate-y-1/2 right-0 bg-gray-500 bg-opacity-50 p-2 rounded-full z-10 mr-4" aria-label="Next" type="button">></button>',
+                });
+            }
+
+            initializeSlickCarousel();
+
+            // Set up the MutationObserver
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'childList') {
+                        mutation.addedNodes.forEach(function(node) {
+                            if (node.nodeType === 1) { // Check if it's an element node
+                                if (node.matches('.image-carousel')) {
+                                    initializeSlickCarousel();
+                                } else if (node.querySelector('.image-carousel')) {
+                                    initializeSlickCarousel();
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Start observing the document body for child elements being added
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
 
             // Smooth scroll for navbar
             let offset;

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Highlight Project</title>
+</head>
+<body>
+<div th:fragment="modalContent">
+    <div id="projectModal" class="relative p-8 bg-white w-full max-w-3xl m-auto flex-col flex rounded-lg shadow-lg">
+        <!-- Close Button -->
+        <button class="absolute top-0 right-0 mt-4 mr-4 text-gray-500 hover:text-gray-700" id="modal-close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                 stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+
+        <!-- Project Title -->
+        <h2 th:text="${project.title}" class="text-2xl font-bold mb-4">Project Title</h2>
+
+        <div class="grid grid-cols-2">
+            <div class="w-full">
+                <!-- Image Carousel -->
+                <div class="image-carousel">
+                    <div th:each="alt, stat: ${project.alts}">
+                        <img class="h-full w-full object-cover z-0 relative p-4"
+                             th:src="@{'/img/' + ${project.name} + '/' + ${stat.index + 1} + '.png'}">
+                        <p class="text-center mt-2" th:text="${alt}">Subtitle</p>
+                    </div>
+                </div>
+
+                <!-- Project Tools -->
+                <div class="flex flex-wrap justify-center my-4">
+                    <span th:each="tool: ${project.tools}" th:text="${tool}"
+                          class="m-2 px-4 py-1 bg-gray-300 rounded-full">Tool</span>
+                </div>
+
+                <!-- Project Description -->
+                <p th:text="${project.description}" class="text-gray-600 mb-4">Project Description</p>
+
+                <!-- Project Link -->
+                <div th:if="${!#strings.isEmpty(project.link)}" class="text-center">
+                    <a th:href="${project.link}" target="_blank" class="text-blue-600 underline hover:font-bold">
+                        <img th:src="@{'/img/' + ${project.icon}}" class="m-2 w-16 h-16 inline">
+                        <span th:text="#{project.view_more}">View More</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="w-full">
+                <div th:if="${project.reviews != null}" th:each="review: ${project.reviews}">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
