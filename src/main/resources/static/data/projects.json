@@ -1,5 +1,6 @@
 [
   {
+    "reviews": [],
     "title": "Chrome Extension to Enhance Timesheet App",
     "name": "clockify",
     "alts": [
@@ -16,7 +17,8 @@
     "icon": "chrome.png"
   },
   {
-    "title": "Control Panels for Farming Machines",
+    "reviews": [],
+    "": "Control Panels for Farming Machines",
     "name": "panels",
     "alts": [
       "Two-way communication with devices (ex. mixers, feeders)",
@@ -42,7 +44,8 @@
     ]
   },
   {
-    "title": "Data Collection and Management",
+    "reviews": [],
+    "": "Data Collection and Management",
     "name": "scraping",
     "alts": [
       "Gather, clean and present data from the web (ex. geospatial, e-commerce, sports)",
@@ -55,7 +58,8 @@
     ]
   },
   {
-    "title": "Chrome Extension Integrating Data to CRM",
+    "reviews": [],
+    "": "Chrome Extension Integrating Data to CRM",
     "name": "crm",
     "alts": [
       "In-page display of external customer data",
@@ -69,7 +73,8 @@
     ]
   },
   {
-    "title": "Script Launcher",
+    "reviews": [],
+    "": "Script Launcher",
     "name": "scraper_gui",
     "alts": [
       "Comes with per-script configs",
@@ -85,7 +90,8 @@
   },
 
   {
-    "title": "Modbus Data Stream Monitoring",
+    "reviews": [],
+    "": "Modbus Data Stream Monitoring",
     "description": "Process for monitoring a Modbus data stream and trigger actions on certain ",
     "name": "monitor_relay",
     "alts": [
@@ -99,7 +105,8 @@
     ]
   },
   {
-    "title": "MS Access Integrated Manager and Launcher",
+    "reviews": [],
+    "": "MS Access Integrated Manager and Launcher",
     "description": "Integrated database management interface and script launcher directly in Microsoft Access ",
     "name": "access_gui",
     "alts": [
@@ -115,7 +122,8 @@
     ]
   },
   {
-    "title": "Personal Website",
+    "reviews": [],
+    "": "Personal Website",
     "description": "Simple personal website",
     "name": "portfolio_site",
     "alts": [
@@ -131,7 +139,8 @@
     "icon": "github.png"
   },
   {
-    "title": "Miscelleaneous",
+    "reviews": [],
+    "": "Miscelleaneous",
     "name": "misc",
     "alts": [
       "CLI, utility or systems scripts",

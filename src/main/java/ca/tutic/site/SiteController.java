@@ -31,12 +31,11 @@ public class SiteController {
     }
 
     @GetMapping("/")
-    public String getHome(@ModelAttribute("highlight") String highlight, Model model) throws IOException {
+    public String getHome(Model model) throws IOException {
         model.addAttribute("projects", staticService.getProjects());
         model.addAttribute("diplomas", staticService.getDiplomas());
         model.addAttribute("jobs", staticService.getJobs());
         model.addAttribute("message", new Message());
-        model.addAttribute("highlight", highlight);
         return "index";
     }
 

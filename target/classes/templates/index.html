@@ -127,8 +127,10 @@
 
                 <div class="container grid grid-cols-1 md:grid-cols-2">
                     <div class="project shadow-lg border border-gray-300 rounded relative m-1 md:m-3" th:each="project: ${projects}">
-                        <a th:href="@{'/highlight?name=' + ${project.name}}"
-                        <h2 th:text="${project.title}">Title</h2>
+                        <a th:href="@{'/highlight/' + ${project.name}}">
+                            <h2 th:text="${project.title}">Title</h2>
+                        </a>
+
                         <div class="image-carousel">
                             <div th:each="alt, stat: ${project.alts}">
                                 <img class="h-full w-full object-cover z-0 relative p-4" th:src="@{'/img/' + ${project.name} + '/' + ${stat.index + 1} + '.png'}" >

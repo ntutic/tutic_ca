@@ -1,5 +1,6 @@
 [
   {
+    "reviews": [],
     "title": "Extension Chrome pour simplifier Clockify",
     "name": "clockify",
     "alts": [
@@ -16,6 +17,7 @@
     "icon": "chrome.png"
   },
   {
+    "reviews": [],
     "title": "GUIs et contrôleurs pour équipement de fermes",
     "name": "panels",
     "alts": [
@@ -30,6 +32,7 @@
     ]
   },
   {
+    "reviews": [],
     "title": "Acquisition et gestion de données",
     "name": "scraping",
     "alts": [
@@ -44,6 +47,7 @@
     ]
   },
   {
+    "reviews": [],
     "title": "Extension Chrome intégrant des données externes",
     "name": "crm",
     "alts": [
@@ -58,6 +62,7 @@
     ]
   },
   {
+    "reviews": [],
     "title": "Lanceurs de scripts",
     "name": "scraper_gui",
     "alts": [
@@ -74,6 +79,7 @@
   },
 
   {
+    "reviews": [],
     "title": "Sniffing d'un flux de données",
     "name": "monitor_relay",
     "alts": [
@@ -87,6 +93,7 @@
     ]
   },
   {
+    "reviews": [],
     "title": "Lanceur intégré à MS Access",
     "name": "access_gui",
     "alts": [
@@ -102,6 +109,7 @@
     ]
   },
   {
+    "reviews": [],
     "title": "Page personnel",
     "name": "portfolio_site",
     "alts": [
@@ -117,6 +125,7 @@
     "icon": "github.png"
   },
   {
+    "reviews": [],
     "title": "Divers",
     "name": "misc",
     "alts": [
