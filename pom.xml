@@ -62,6 +62,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.webjars.npm/htmx.org -->
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>htmx.org</artifactId>
+			<version>1.9.12</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

@@ -40,7 +40,7 @@ public class SiteController {
         return "index";
     }
 
-    @PostMapping("/highlight")
+    @PostMapping("/highlight/{name}")
     public String getHighlight(@RequestParam("name") String name, RedirectAttributes redirectAttributes) throws IOException {
         redirectAttributes.addFlashAttribute("highlight", name);
         return "redirect:/";
@@ -52,6 +52,7 @@ public class SiteController {
         System.out.println(message);
         return emailService.sendEmail(message);
     }
+
 
     @RequestMapping("/{lang}")
     public String changeLocale(@PathVariable("lang") String lang,
